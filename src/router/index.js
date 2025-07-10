@@ -21,17 +21,24 @@ const routes = [
     meta: { title: 'Portfolio' }
   },
   {
-    path: '/blog',
-    name: 'blog',
-    component: () => import('../views/BlogView.vue'),
-    meta: { title: 'Blog' }
+    path: '/sertifikat',
+    name: 'sertifikat',
+    component: () => import('../views/SertifikatView.vue'),
+    meta: { title: 'Sertifikat' }
   },
   {
     path: '/read/:slug/:id',
     name: 'articleDetail',
     component: () => import('../views/ArticleView.vue'),
     meta: { title: 'Blog' }
-  }
+  },
+  {
+    path: '/contact', // ✅ ROUTE BARU UNTUK HALAMAN CONTACT
+    name: 'contact',
+    component: () => import('../views/ContactView.vue'),
+    meta: { title: 'Contact' }
+  },
+ 
 ]
 
 const router = createRouter({
@@ -40,8 +47,8 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title + ' - bagasRakha();'; // Mengambil judul dari meta atau mengatur judul default jika tidak ada
+  document.title = to.meta.title + ' - Fadhly Achmad 🚀';
   next();
-});
+})
 
 export default router

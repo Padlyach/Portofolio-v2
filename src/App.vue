@@ -1,52 +1,44 @@
 <template>
-  <!-- component -->
-  <!-- This is an example component -->
   <div class="max-w-7xl mx-auto flex flex-col relative">
-
+    <!-- Navbar -->
     <nav class="max-w-7xl px-5 md:fixed top-0 z-[98] w-screen backdrop-blur-md bg-[#121212] bg-opacity-80">
       <div class="container mx-auto flex flex-wrap items-center justify-between">
         <button @click="redirectToHome" class="flex">
-          <span class="self-center text-lg text-[#ffdb70] font-semibold whitespace-nowrap fadein-bot hover:text-amber-100">bagasRakha();</span>
+          <span class="self-center text-lg text-[#a855f7] font-semibold whitespace-nowrap fadein-bot hover:text-purple-300">Fadhly Achmad</span>
         </button>
         <div class="flex md:order-2 fadein-bot">
-          <a href="https://github.com/rakha-elctrnx"><img class="w-9 rounded-full" src="https://seeklogo.com/images/G/github-logo-2E3852456C-seeklogo.com.png" alt="github"></a>
+          <a href="https://github.com/Padlyach">
+            <img class="w-9 rounded-full" src="https://seeklogo.com/images/G/github-logo-2E3852456C-seeklogo.com.png" alt="github">
+          </a>
         </div>
         <div class="hidden md:flex justify-between items-center w-full md:w-auto md:order-1" id="mobile-menu-3">
           <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
-            <li>
-              <router-link to="/"
-                class="fadein-bot text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0"
-                aria-current="page">Home</router-link>
-            </li>
-            <li>
-              <router-link to="/about"
-                class="fadein-bot fadein-1 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">About</router-link>
-            </li>
-            <li>
-              <router-link to="/portfolio"
-                class="fadein-bot fadein-2 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">Portfolio</router-link>
-            </li>
-            <li>
-              <router-link to="/blog"
-                class="fadein-bot fadein-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0 blog">Blog</router-link>
-            </li>
+            <li><router-link to="/" class="fadein-bot text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">Home</router-link></li>
+            <li><router-link to="/about" class="fadein-bot fadein-1 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">About</router-link></li>
+            <li><router-link to="/portfolio" class="fadein-bot fadein-2 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">Portfolio</router-link></li>
+            <li><router-link to="/sertifikat" class="fadein-bot fadein-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">Sertifikat</router-link></li>
+            <li><router-link to="/contact" class="fadein-bot fadein-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">Contact</router-link></li>
           </ul>
         </div>
       </div>
     </nav>
 
+    <!-- Halaman Utama -->
     <div class="md:mt-[100px]">
       <router-view />
     </div>
+
+    <!-- Footer Mobile -->
+    <footer class="block md:hidden fixed bottom-0 left-0 right-0 rounded-t-3xl border border-[#383838] bg-[#121212] bg-opacity-80 backdrop-blur-md backdrop-opacity-90">
+      <nav class="flex justify-around py-4 text-xs">
+        <router-link to="/" class="text-gray-300 hover:text-white">Home</router-link>
+        <router-link to="/about" class="text-gray-300 hover:text-white">About</router-link>
+        <router-link to="/portfolio" class="text-gray-300 hover:text-white">Portfolio</router-link>
+        <router-link to="/sertifikat" class="text-gray-300 hover:text-white">Sertifikat</router-link>
+        <router-link to="/contact" class="text-gray-300 hover:text-white">Contact</router-link>
+      </nav>
+    </footer>
   </div>
-  <footer class="block md:hidden fixed bottom-0 left-0 right-0 rounded-t-3xl border border-[#383838] bg-[#121212] bg-opacity-80 backdrop-blur-md backdrop-opacity-90">
-  <nav class="flex justify-around py-4 text-xs">
-    <router-link to="/" class="text-gray-300 hover:text-white">Home</router-link>
-    <router-link to="/about" class="text-gray-300 hover:text-white">About</router-link>
-    <router-link to="/portfolio" class="text-gray-300 hover:text-white">Portfolio</router-link>
-    <router-link to="/blog" class="text-gray-300 hover:text-white">Blog</router-link>
-  </nav>
-</footer>
 </template>
 
 <script>
@@ -55,11 +47,12 @@ export default {
     redirectToHome() {
       this.$router.push('/')
     }
-  },
+  }
 }
 </script>
 
 <style>
+/* Styling original milikmu */
 *,
 *::before,
 *::after {
@@ -69,8 +62,8 @@ export default {
 }
 
 ::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -79,11 +72,13 @@ export default {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ffdb70;
+  background: #a855f7;
   border-radius: 5px;
 }
 
-::-webkit-scrollbar-button { width: 20px; }
+::-webkit-scrollbar-button {
+  width: 20px;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -119,23 +114,10 @@ nav a.router-link-exact-active::after {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: #ffdb70;
+  background-color: #a855f7;
 }
 
 nav a.router-link-exact-active:hover {
   color: white;
 }
-
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 </style>
