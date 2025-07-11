@@ -58,43 +58,25 @@ export default {
           id: 1,
           image: '/img/certificate-ml.jpg',
           title: 'Sertifikat Juara 1 Lomba Coding',
-          description: 'Memenangkan lomba coding tingkat nasional tahun 2024.'
+          description: 'Juara 1 Lomba Coding Machine Learning Nasional.'
         },
         {
           id: 2,
-          image: '/img/certificate-2.jpg',
-          title: 'Sertifikat Peserta Workshop Laravel',
-          description: 'Mengikuti workshop Laravel se-Indonesia di Jakarta.'
+          image: '/img/portfolio-sistekdes.png',
+          title: 'Sertifikat Sistekdes',
+          description: 'Penghargaan atas kontribusi pada proyek Sistekdes.'
         },
         {
           id: 3,
-          image: '/img/certificate-3.jpg',
-          title: 'Sertifikat Pelatihan Frontend Developer',
-          description: 'Pelatihan Frontend Developer intensif selama 3 bulan.'
+          image: '/img/portfolio-bumdesma.png',
+          title: 'Sertifikat Bumdesma',
+          description: 'Penghargaan atas kontribusi pada proyek Bumdesma.'
         },
         {
           id: 4,
-          image: '/img/certificate-4.jpg',
-          title: 'Sertifikat Seminar Teknologi AI',
-          description: 'Seminar tentang Artificial Intelligence di Bandung.'
-        },
-        {
-          id: 5,
-          image: '/img/certificate-5.jpg',
-          title: 'Sertifikat Pelatihan React Native',
-          description: 'Selesai mengikuti pelatihan React Native Mobile App.'
-        },
-        {
-          id: 6,
-          image: '/img/certificate-6.jpg',
-          title: 'Sertifikat Kelas UI/UX Design',
-          description: 'Belajar desain user interface dan experience aplikasi.'
-        },
-        {
-          id: 7,
-          image: '/img/certificate-7.jpg',
-          title: 'Sertifikat Project Website Sekolah',
-          description: 'Membuat dan merancang website resmi sekolah.'
+          image: '/img/portfolio-portfolio_v2.png',
+          title: 'Sertifikat Portfolio V2',
+          description: 'Penghargaan atas pembuatan portfolio versi 2.'
         }
       ],
       showModal: false,
@@ -143,4 +125,4 @@ export default {
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out;
 }
-</style> tolong tinggiin lagi card nya agar image nya terlihat 
+</style>
