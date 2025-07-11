@@ -62,7 +62,7 @@
     </div>
 
     <!-- Footer Mobile -->
-    <footer class="block md:hidden fixed bottom-0 left-0 right-0 rounded-t-3xl border border-[#383838] bg-[#121212] bg-opacity-80 backdrop-blur-md backdrop-opacity-90">
+    <footer class="block md:hidden fixed bottom-0 left-0 w-full right-0 rounded-t-3xl border border-[#383838] bg-[#121212] bg-opacity-95 backdrop-blur-md backdrop-opacity-90 z-[999] pointer-events-auto">
       <nav class="flex justify-around py-4 text-xs">
         <a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a>
         <a href="#about" class="nav-link text-gray-300 hover:text-white">About</a>
@@ -72,8 +72,8 @@
       </nav>
     </footer>
 
-    <!-- Premium Modern Footer -->
-    <footer class="hidden md:block relative z-50 bg-footer-gradient text-gray-200 pt-20 pb-10 px-8 overflow-hidden premium-footer">
+    <!-- Premium Modern Footer - Always Visible -->
+    <footer class="relative z-50 bg-footer-gradient text-gray-200 pt-20 pb-10 px-8 overflow-hidden premium-footer">
       <!-- Organic Wave Background -->
       <div class="absolute left-0 top-0 w-full h-full pointer-events-none -z-10">
         <svg viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
@@ -84,7 +84,7 @@
         <!-- About Us -->
         <div>
           <h3 class="footer-title">About Us</h3>
-          <p class="footer-desc">Fadhly Achmad is a passionate designer & developer crafting digital experiences with soul. Let’s build something unforgettable together.</p>
+          <p class="footer-desc">Fadhly Achmad is a passionate designer & developer crafting digital experiences with soul. Let's build something unforgettable together.</p>
           <div class="flex space-x-4 mt-6">
             <a href="https://github.com/Padlyach" target="_blank" class="footer-social group" aria-label="GitHub">
               <svg class="footer-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.38-2.03 1.01-2.75-.1-.26-.44-1.3.1-2.7 0 0 .83-.27 2.73 1.02A9.18 9.18 0 0 1 12 6.84c.84.004 1.68.11 2.47.32 1.9-1.29 2.73-1.02 2.73-1.02.54 1.4.2 2.44.1 2.7.63.72 1.01 1.63 1.01 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z" fill="currentColor"/></svg>
@@ -109,23 +109,23 @@
           </ul>
         </div>
          <!-- Get in Touch Section -->
-    <div>
-      <h3 class="footer-title">Get in Touch</h3>
-      <p class="footer-desc">Have a project in mind? Let's collaborate and make something extraordinary. Reach out via email or connect on social media.</p>
-      <div class="mt-6 space-y-2 text-sm text-gray-400">
-        <div class="flex items-center space-x-2">
-          <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4z" fill="none"/><path d="M20 4H4v16h16V4zm-2 2v12H6V6h12z"/></svg>
-          <span>fadhlyach2007@gmail.com</span>
+        <div>
+          <h3 class="footer-title">Get in Touch</h3>
+          <p class="footer-desc">Have a project in mind? Let's collaborate and make something extraordinary. Reach out via email or connect on social media.</p>
+          <div class="mt-6 space-y-2 text-sm text-gray-400">
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4z" fill="none"/><path d="M20 4H4v16h16V4zm-2 2v12H6V6h12z"/></svg>
+              <span>fadhlyach2007@gmail.com</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+              <span>Fadhly Achmad</span>
+            </div>
+          </div>
+          <div class="mt-8 text-center">
+            <a href="#contact" class="footer-btn-contact">Contact Us</a>
+          </div>
         </div>
-        <div class="flex items-center space-x-2">
-          <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          <span>Fadhly Achmad</span>
-        </div>
-      </div>
-      <div class="mt-8 text-center">
-        <a href="#contact" class="footer-btn-contact">Contact Us</a>
-      </div>
-    </div>
       </div>
       <div class="mt-16 text-center text-xs text-gray-500 opacity-70 tracking-wide">
         Fadhly Achmad
@@ -419,6 +419,7 @@ nav a.router-link-exact-active:hover {
   border-top-left-radius: 2.5rem;
   border-top-right-radius: 2.5rem;
   box-shadow: 0 -8px 32px 0 #a855f7aa;
+  /* Footer is now always visible - removed the display: none on mobile */
 }
 .bg-footer-gradient {
   background: linear-gradient(120deg, #18181b 60%, #23272f 100%);
@@ -573,7 +574,51 @@ nav a.router-link-exact-active:hover {
   filter: drop-shadow(0 2px 16px #38bdf8cc);
   transform: scale(1.15) rotate(6deg);
 }
-@media (max-width: 1023px) {
-  .premium-footer { display: none; }
+
+/* Responsive adjustments for mobile */
+@media (max-width: 767px) {
+  .scroll-container {
+    padding-bottom: 80px; /* Agar konten tidak tertutup footer mobile */
+  }
+  
+  /* Adjust footer for mobile - make it stack vertically */
+  .premium-footer .max-w-7xl {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-title {
+    font-size: 1.2rem;
+  }
+  
+  .footer-desc {
+    font-size: 0.95rem;
+  }
+  
+  .footer-btn-contact {
+    padding: 0.6rem 1.8rem;
+    font-size: 1rem;
+  }
+  
+  .premium-footer {
+    padding: 3rem 1rem 2rem;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  .premium-footer {
+    padding: 2rem 1rem 1.5rem;
+  }
+  
+  .footer-social {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .footer-social .footer-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 </style>
