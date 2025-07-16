@@ -34,29 +34,26 @@ export default {
         </div>
       </header>
 
-      <section class="text-sm md:text-lg text-justify flex flex-col gap-8 md:flex-row md:gap-12 md:items-center">
-        <div class="flex justify-center">
-          <img class="w-9/12 rounded-full mb-3 fadein-up border-4 border-purple-300 pict" src="../assets/hitam.jpg" alt="Foto">
-        </div>
-        <div class="md:w-7/12 space-y-6 fadein-left">
-          <p class="text-gray-300 leading-relaxed fadeins-1">
-            Nama saya <span class="font-semibold text-purple-300">Fadhly Achmad</span>, seorang siswa di 
-            <span class="font-semibold text-purple-300">SMK Informatika Pesat</span> dengan jurusan 
-            <span class="font-semibold text-purple-300">Rekayasa Perangkat Lunak (RPL)</span>. 
-            Saya memiliki ketertarikan yang besar dalam dunia teknologi dan pengembangan perangkat lunak.
-            Di jurusan ini, saya belajar tentang bagaimana merancang, mengembangkan, dan memelihara perangkat lunak
-            yang efektif serta efisien untuk memenuhi kebutuhan pengguna.
-          </p>
-          
-          <p class="text-gray-300 leading-relaxed fadeins-2">
-            Saya sangat menikmati tantangan dalam memecahkan masalah menggunakan teknologi, 
-            dan selalu berusaha untuk terus belajar serta mengembangkan keterampilan dalam dunia pemrograman. 
-            Saya percaya bahwa teknologi memiliki potensi besar untuk membuat perubahan positif dalam kehidupan sehari-hari,
-            dan saya bersemangat untuk menjadi bagian dari perkembangan tersebut.
-            Selain itu, saya juga aktif mengembangkan berbagai proyek aplikasi web maupun perangkat lunak lainnya.
-          </p>
-        </div>
-      </section>
+      <section class="text-sm text-justify flex flex-col gap-4 md:flex-row md:gap-8 md:items-center py-4">
+  <div class="flex justify-center">
+    <img class="w-32 md:w-40 rounded-full fadein-up border-2 border-purple-300 pict" src="../assets/hitam.jpg" alt="Foto">
+  </div>
+  <div class="md:w-8/12 space-y-4 fadein-left">
+    <p class="text-gray-300 leading-relaxed fadeins-1">
+      Nama saya <span class="font-semibold text-purple-300">Fadhly Achmad</span>, seorang siswa di 
+      <span class="font-semibold text-purple-300">SMK Informatika Pesat</span> jurusan 
+      <span class="font-semibold text-purple-300">Rekayasa Perangkat Lunak (RPL)</span>. 
+      Saya antusias dengan dunia teknologi dan pengembangan perangkat lunak.
+    </p>
+
+    <p class="text-gray-300 leading-relaxed fadeins-2">
+      Saya menikmati tantangan memecahkan masalah melalui teknologi, dan terus belajar 
+      meningkatkan keterampilan pemrograman. Saya percaya teknologi mampu membawa perubahan positif, 
+      dan saya senang ikut berkontribusi melalui proyek web dan perangkat lunak yang saya kembangkan.
+    </p>
+  </div>
+</section>
+
     </article>
   </div>
 
