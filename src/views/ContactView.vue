@@ -1,6 +1,6 @@
 <template>
   <main class="mt-10 flex flex-col items-center justify-center min-h-[65vh] px-6">
-    <div class="flex flex-col md:flex-row gap-8 p-8 rounded-2xl shadow-xl max-w-4xl w-full bg-[#1e1e1f] border border-[#383838]  fadein-up">
+    <div class="flex flex-col md:flex-row gap-8 p-8 rounded-2xl shadow-xl max-w-4xl w-full bg-[#1e1e1f] border border-[#383838] fadein-up">
       <!-- Left: Photo & Description -->
       <div class="flex flex-col items-center justify-center md:w-2/5 px-4">
         <img
@@ -65,13 +65,34 @@
   </main>
 </template>
 
+<script>
+export default {
+  name: "ContactSection",
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
+  methods: {
+    submitForm() {
+      console.log("Email:", this.email);
+      console.log("Password:", this.password);
+      alert("Form berhasil dikirim!");
+      // Reset form jika perlu
+      this.email = '';
+      this.password = '';
+    }
+  }
+}
+</script>
+
 <style scoped>
 .pict {
   box-shadow: 0px 0px 73px -9px rgba(128, 0, 128, 0.44);
   -webkit-box-shadow: 0px 0px 73px -9px rgba(128, 0, 128, 0.44);
   -moz-box-shadow: 0px 0px 73px -9px rgba(128, 0, 128, 0.44);
 }
-
 
 .fadein-up {
   opacity: 0;
@@ -92,36 +113,10 @@
   }
 }
 
-/* Hover effect untuk icon */
 .fab, .fas {
   transition: color 0.3s ease;
 }
 .fab:hover, .fas:hover {
   color: #9b4f96;
-}
-
-/* Mengatur lebar dan padding */
-.max-w-4xl {
-  max-width: 50rem;
-}
-
-.p-8 {
-  padding: 2rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 </style>

@@ -1,8 +1,10 @@
 <template>
   <div class="section-header">
-          <h2 class="section-title">Home</h2>
-          <p class="section-desc">Welcome! Explore my creative portfolio and journey as a developer and designer.</p>
-        </div>
+        <h5 class="section-title">Home</h5>
+        <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
+            Welcome! Explore my creative portfolio and journey as a developer and designer
+        </h4>
+  </div>
   <main
     class="mt-0 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[60vh]">
     <div class="space-y-2 text-center md:text-left px-10">
