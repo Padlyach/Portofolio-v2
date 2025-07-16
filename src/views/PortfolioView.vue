@@ -6,7 +6,7 @@ export default {
       items: [
         {
           id: 1,
-          name: 'Creative Design',
+          name: 'Website Creative Design',
           imageUrl: 'creative',
           status: 'Project Awal Mulai Belajar HTML dan CSS , Di Pelajari Saat Semester 1 Kelas X Dengan Dampingan Guru.',
           tech: 'HTML , CSS',
@@ -24,7 +24,7 @@ export default {
         },
         {
           id: 3,
-          name: 'Travel',
+          name: 'Website Travel',
           imageUrl: 'travelindo',
           status: 'Website Travel Sepulau Jawa Yang Menampilkan Tempat Wisata Atau Penginapan Terbaik , Dengan Deskripsi Jelas.',
           tech: 'Laravel 9, Bootstrap',
@@ -33,19 +33,19 @@ export default {
         },
         {
           id: 4,
-          name: 'Udin din Din Dun',
-          imageUrl: 'bumdesma',
-          status: 'A web application used by village-owned enterprises of accounting that is equipped with a microfinance balance.',
-          tech: 'Laravel 8, Bootstrap',
+          name: 'Website Undangan Pernikahan',
+          imageUrl: 'nikah',
+          status: 'Website Berisi Tnetang Undangan Pernikahan Yang Menarik , Dengan Desain Perpaduan Warna Merah Dan Putih.',
+          tech: 'Laravel 8, JS',
           github: '',
           demo: ''
         },
         {
           id: 5,
-          name: 'Tuhg Tung Sahur',
-          imageUrl: 'tung',
-          status: 'Sistem Percepatan Pelayanan Surat Elektronik, A web application to manage letters in the village.',
-          tech: 'Codeigniter 3, Bootstrap',
+          name: 'Website Perpustakaan Online',
+          imageUrl: 'perpustakaan',
+          status: 'Website Perpustakaan Online , Yang Dapat Menyimpan Data Meminjam Dan Mengembalikan Buku.',
+          tech: 'Laravel, PHP, Tailwind',
           github: '',
           demo: ''
         },
