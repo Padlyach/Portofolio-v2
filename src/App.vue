@@ -27,6 +27,13 @@
     <div class="scroll-container">
       <section id="home" class="min-h-screen pt-28 section designer-section">
         <HomeView />
+              <div class="w-full flex justify-center items-center mt-20">
+                <div class="animate-bounce">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                </div>
+              </div>
       </section>
       <section id="about" class="min-h-screen pt-10 section designer-section">
         <div class="section-header">
@@ -64,7 +71,7 @@
     </div>
 
     <!-- Footer Mobile -->
-    <footer class="block md:hidden fixed bottom-0 left-0 w-full right-0 pt-20 rounded-t-3xl border border-[#383838] bg-[#121212] bg-opacity-95 backdrop-blur-md backdrop-opacity-90 z-[999] pointer-events-auto">
+    <footer class="block md:hidden fixed bottom-0 left-0 w-full right-0 pt-2 rounded-t-3xl border border-[#383838] bg-[#121212] bg-opacity-95 backdrop-blur-md backdrop-opacity-90 z-[999] pointer-events-auto">
       <nav class="flex justify-around py-4 text-xs">
         <a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a>
         <a href="#about" class="nav-link text-gray-300 hover:text-white">About</a>
@@ -73,67 +80,67 @@
         <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
       </nav>
     </footer>
-
-    <!-- Premium Modern Footer - Always Visible -->
-    <footer class="relative z-50 bg-footer-gradient text-gray-200 pt-20 pb-10 px-8 overflow-hidden premium-footer">
-      <!-- Organic Wave Background -->
-      <div class="absolute left-0 top-0 w-full h-full pointer-events-none -z-10">
-        <svg viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-          <path fill="#a855f7" fill-opacity="0.12" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,154.7C840,149,960,171,1080,186.7C1200,203,1320,213,1380,218.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
-        </svg>
-      </div>
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-        <!-- About Us -->
-        <div>
-          <h3 class="footer-title">About Us</h3>
-          <p class="footer-desc">Fadhly Achmad is a passionate designer & developer crafting digital experiences with soul. Let's build something unforgettable together.</p>
-          <div class="flex space-x-4 mt-6">
-            <a href="https://github.com/Padlyach" target="_blank" class="footer-social group" aria-label="GitHub">
-              <svg class="footer-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.38-2.03 1.01-2.75-.1-.26-.44-1.3.1-2.7 0 0 .83-.27 2.73 1.02A9.18 9.18 0 0 1 12 6.84c.84.004 1.68.11 2.47.32 1.9-1.29 2.73-1.02 2.73-1.02.54 1.4.2 2.44.1 2.7.63.72 1.01 1.63 1.01 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z" fill="currentColor"/></svg>
-            </a>
-            <a href="#" class="footer-social group" aria-label="Instagram">
-              <svg class="footer-icon" viewBox="0 0 24 24"><radialGradient id="ig" cx="50%" cy="50%" r="80%"><stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#38bdf8"/></radialGradient><rect width="24" height="24" rx="6" fill="url(#ig)"/><path d="M12 8.5A3.5 3.5 0 1 0 12 15.5A3.5 3.5 0 1 0 12 8.5Z" fill="#fff"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff"/></svg>
-            </a>
-            <a href="#" class="footer-social group" aria-label="LinkedIn">
-              <svg class="footer-icon" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#38bdf8"/><path d="M7.5 9h2v6h-2V9zm1-2a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm3 2h2v.8c.28-.5.98-1.3 2.02-1.3C17.5 8.5 18 9.4 18 11.1V15h-2v-3c0-.7-.01-1.6-1-1.6s-1.1.8-1.1 1.6V15h-2V9z" fill="#fff"/></svg>
-            </a>
-          </div>
-        </div>
-        <!-- Links -->
-        <div>
-          <h3 class="footer-title">Links</h3>
-          <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#sertifikat">Certificates</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-         <!-- Get in Touch Section -->
-        <div>
-          <h3 class="footer-title">Get in Touch</h3>
-          <p class="footer-desc">Have a project in mind? Let's collaborate and make something extraordinary. Reach out via email or connect on social media.</p>
-          <div class="mt-6 space-y-2 text-sm text-gray-400">
-            <div class="flex items-center space-x-2">
-              <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4z" fill="none"/><path d="M20 4H4v16h16V4zm-2 2v12H6V6h12z"/></svg>
-              <span>fadhlyach2007@gmail.com</span>
-            </div>
-            <div class="flex items-center space-x-2">
-              <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-              <span>Fadhly Achmad</span>
-            </div>
-          </div>
-          <div class="mt-8 text-center">
-            <a href="#contact" class="footer-btn-contact">Contact Us</a>
-          </div>
-        </div>
-      </div>
-      <div class="mt-16 text-center text-xs text-gray-500 opacity-70 tracking-wide">
-        Fadhly Achmad
-      </div>
-    </footer>
   </div>
+
+  <!-- Premium Modern Footer - Full Width -->
+  <footer class="relative z-50 bg-footer-gradient text-gray-200 mt-20 pt-5 pb-10 overflow-hidden premium-footer w-full">
+    <!-- Organic Wave Background -->
+    <div class="absolute left-0 top-0 w-full h-full pointer-events-none -z-10">
+      <svg viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+        <path fill="#a855f7" fill-opacity="0.12" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,154.7C840,149,960,171,1080,186.7C1200,203,1320,213,1380,218.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+      </svg>
+    </div>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 relative px-8">
+      <!-- About Us -->
+      <div>
+        <h3 class="footer-title">About Us</h3>
+        <p class="footer-desc">Fadhly Achmad is a passionate designer & developer crafting digital experiences with soul. Let's build something unforgettable together.</p>
+        <div class="flex space-x-4 mt-6">
+          <a href="https://github.com/Padlyach" target="_blank" class="footer-social group" aria-label="GitHub">
+            <svg class="footer-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.38-2.03 1.01-2.75-.1-.26-.44-1.3.1-2.7 0 0 .83-.27 2.73 1.02A9.18 9.18 0 0 1 12 6.84c.84.004 1.68.11 2.47.32 1.9-1.29 2.73-1.02 2.73-1.02.54 1.4.2 2.44.1 2.7.63.72 1.01 1.63 1.01 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="footer-social group" aria-label="Instagram">
+            <svg class="footer-icon" viewBox="0 0 24 24"><radialGradient id="ig" cx="50%" cy="50%" r="80%"><stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#38bdf8"/></radialGradient><rect width="24" height="24" rx="6" fill="url(#ig)"/><path d="M12 8.5A3.5 3.5 0 1 0 12 15.5A3.5 3.5 0 1 0 12 8.5Z" fill="#fff"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff"/></svg>
+          </a>
+          <a href="#" class="footer-social group" aria-label="LinkedIn">
+            <svg class="footer-icon" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#38bdf8"/><path d="M7.5 9h2v6h-2V9zm1-2a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm3 2h2v.8c.28-.5.98-1.3 2.02-1.3C17.5 8.5 18 9.4 18 11.1V15h-2v-3c0-.7-.01-1.6-1-1.6s-1.1.8-1.1 1.6V15h-2V9z" fill="#fff"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- Links -->
+      <div>
+        <h3 class="footer-title">Links</h3>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#sertifikat">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+       <!-- Get in Touch Section -->
+      <div>
+        <h3 class="footer-title">Get in Touch</h3>
+        <p class="footer-desc">Have a project in mind? Let's collaborate and make something extraordinary. Reach out via email or connect on social media.</p>
+        <div class="mt-6 space-y-2 text-sm text-gray-400">
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4z" fill="none"/><path d="M20 4H4v16h16V4zm-2 2v12H6V6h12z"/></svg>
+            <span>fadhlyach2007@gmail.com</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <span>Fadhly Achmad</span>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <a href="#contact" class="footer-btn-contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-16 text-center text-xs text-gray-500 opacity-70 tracking-wide">
+      Fadhly Achmad
+    </div>
+  </footer>
 </template>
 
 <script>
