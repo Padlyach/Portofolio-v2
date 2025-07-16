@@ -25,24 +25,26 @@
 
     <!-- Main Content -->
     <div class="scroll-container">
-      <section id="home" class="min-h-screen mt-4 section designer-section">
+      <section id="home" class="min-h-screen pt-28 section designer-section">
         <HomeView />
       </section>
-      <section id="about" class="min-h-screen section designer-section">
+      <section id="about" class="min-h-screen pt-10 section designer-section">
         <div class="section-header">
           <h2 class="section-title">About Me</h2>
-          <p class="section-desc">A brief introduction, my skills, and the tools I use to build beautiful digital experiences.</p>
+          <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
+           A brief introduction, my skills, and the tools I use to build beautiful digital experiences.
+        </h4>
         </div>
         <AboutView />
       </section>
-      <section id="portfolio" class="min-h-screen section designer-section">
+      <section id="portfolio" class="min-h-screen pt-10 section designer-section">
         <div class="section-header">
           <h2 class="section-title">Portfolio</h2>
           <p class="section-desc">A showcase of my selected works, projects, and creative solutions.</p>
         </div>
         <PortfolioView />
       </section>
-      <section id="sertifikat" class="min-h-screen section designer-section">
+      <section id="sertifikat" class="min-h-screen pt-20 section designer-section">
         <div class="section-header">
           <h2 class="section-title">Certificates</h2>
           <p class="section-desc">My certifications and achievements, demonstrating my commitment to learning and growth.</p>
@@ -52,7 +54,7 @@
         </div>
         <SertifikatView />
       </section>
-      <section id="contact" class="min-h-screen section designer-section">
+      <section id="contact" class="min-h-screen pt-10 section designer-section">
         <div class="section-header">
           <h2 class="section-title">Contact</h2>
           <p class="section-desc">Let's connect! Reach out for collaborations, questions, or just to say hello.</p>
@@ -62,7 +64,7 @@
     </div>
 
     <!-- Footer Mobile -->
-    <footer class="block md:hidden fixed bottom-0 left-0 w-full right-0 rounded-t-3xl border border-[#383838] bg-[#121212] bg-opacity-95 backdrop-blur-md backdrop-opacity-90 z-[999] pointer-events-auto">
+    <footer class="block md:hidden fixed bottom-0 left-0 w-full right-0 pt-20 rounded-t-3xl border border-[#383838] bg-[#121212] bg-opacity-95 backdrop-blur-md backdrop-opacity-90 z-[999] pointer-events-auto">
       <nav class="flex justify-around py-4 text-xs">
         <a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a>
         <a href="#about" class="nav-link text-gray-300 hover:text-white">About</a>
@@ -148,14 +150,6 @@ export default {
     PortfolioView,
     SertifikatView,
     ContactView
-  },
-  data() {
-    return {
-      certificateImages: [
-        '/img/certificate-ml.jpg',
-        // Add more certificate images here if needed
-      ]
-    }
   },
   mounted() {
     this.initScrollSpy();
