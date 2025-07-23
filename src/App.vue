@@ -47,14 +47,18 @@
       <section id="portfolio" class="min-h-screen pt-10 section designer-section">
         <div class="section-header">
           <h2 class="section-title">Portfolio</h2>
-          <p class="section-desc">A showcase of my selected works, projects, and creative solutions.</p>
+        <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
+           A showcase of my selected works, projects, and creative solutions.
+        </h4>
         </div>
         <PortfolioView />
       </section>
       <section id="sertifikat" class="min-h-screen pt-20 section designer-section">
         <div class="section-header">
           <h2 class="section-title">Certificates</h2>
-          <p class="section-desc">My certifications and achievements, demonstrating my commitment to learning and growth.</p>
+        <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
+          My certifications and achievements, demonstrating my commitment to learning and growth.
+        </h4>
         </div>
         <div class="certificates-gallery flex flex-wrap justify-center gap-6 py-8">
           <img v-for="img in certificateImages" :key="img" :src="img" class="certificate-img shadow-xl rounded-2xl transition-transform duration-500 hover:scale-105" alt="Certificate" />
@@ -64,7 +68,9 @@
       <section id="contact" class="min-h-screen pt-10 section designer-section">
         <div class="section-header">
           <h2 class="section-title">Contact</h2>
-          <p class="section-desc">Let's connect! Reach out for collaborations, questions, or just to say hello.</p>
+        <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
+         Let's connect! Reach out for collaborations, questions, or just to say hello.
+        </h4>
         </div>
         <ContactView />
       </section>
