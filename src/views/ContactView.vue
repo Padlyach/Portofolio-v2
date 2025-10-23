@@ -16,52 +16,19 @@
       <!-- Right: Contact Form -->
       <div class="md:w-3/5 px-4">
         <form @submit.prevent="submitForm" class="space-y-5">
-          <div>
-            <label class="block text-sm font-medium text-purple-600 mb-1">Email</label>
-            <input
-              type="email"
-              v-model="email"
-              placeholder="example@gmail.com"
-              required
-              class="w-full px-4 py-2 rounded-md bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-            />
+         <div class="flex items-center gap-3 border border-purple-600 rounded-lg p-4 bg-white mt-10">
+            <i class="fas fa-envelope text-purple-600 text-xl"></i>
+            <span class="text-gray-700 break-words">fadhlyach2007@gmail.com</span>
           </div>
-          <div>
-            <label class="block text-sm font-medium text-purple-600 mb-1">Password</label>
-            <input
-              type="password"
-              v-model="password"
-              placeholder="Your password"
-              required
-              class="w-full px-4 py-2 rounded-md bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-            />
+           <div class="flex items-center gap-3 border border-purple-600 rounded-lg p-4 bg-white">
+            <i class="fas fa-phone text-purple-600 text-xl"></i>
+            <span class="text-gray-700">+62 857-7290-0719</span>
           </div>
-          <button
-            type="submit"
-            class="w-full py-2 px-4 bg-white hover:bg-gray-100 text-purple-600 font-semibold rounded-md transition duration-300"
-          >
-            Submit
-          </button>
+         
         </form>
       </div>
     </div>
 
-    <!-- Additional Contact Info -->
-    <div class="mt-8 flex justify-center w-full px-6">
-      <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-xl max-w-4xl w-full bg-[#1e1e1f] border border-[#383838] fadein-up">
-        <h2 class="text-2xl font-bold text-center text-purple-600 mb-4">Contact</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="flex items-center gap-3 border border-purple-600 rounded-lg p-4 bg-white">
-            <i class="fas fa-envelope text-purple-600 text-xl"></i>
-            <span class="text-gray-700 break-words">fadhlyach2007@gmail.com</span>
-          </div>
-          <div class="flex items-center gap-3 border border-purple-600 rounded-lg p-4 bg-white">
-            <i class="fas fa-phone text-purple-600 text-xl"></i>
-            <span class="text-gray-700">+62 857-7290-0719</span>
-          </div>
-        </div>
-      </div>
-    </div>
   </main>
 </template>
 
