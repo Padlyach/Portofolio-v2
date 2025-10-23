@@ -7,9 +7,11 @@
           <span class="self-center text-lg text-[#a855f7] font-semibold whitespace-nowrap fadein-bot hover:text-purple-300">Fadhly Achmad</span>
         </a>
         <div class="flex md:order-2 fadein-bot">
-          <a href="https://github.com/Padlyach" target="_blank">
-            <img class="w-9 rounded-full" src="https://seeklogo.com/images/G/github-logo-2E3852456C-seeklogo.com.png" alt="github">
-          </a>
+          <div class="flex md:order-2 fadein-bot">
+  <a href="https://github.com/Padlyach" target="_blank" class="flex items-center justify-center w-9 h-9">
+    <svg class="w-7 h-7 text-white hover:text-[#a855f7] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.38-2.03 1.01-2.75-.1-.26-.44-1.3.1-2.7 0 0 .83-.27 2.73 1.02A9.18 9.18 0 0 1 12 6.84c.84.004 1.68.11 2.47.32 1.9-1.29 2.73-1.02 2.73-1.02.54 1.4.2 2.44.1 2.7.63.72 1.01 1.63 1.01 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+  </a>
+</div>
         </div>
         <div class="hidden md:flex justify-between items-center w-full md:w-auto md:order-1" id="mobile-menu-3">
           <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
@@ -392,19 +394,7 @@ nav a.router-link-exact-active:hover {
   box-shadow: 0 8px 32px 0 #a855f7aa;
 }
 
-/* Designer-like section transitions */
-.designer-section {
-  opacity: 0;
-  transform: translateY(60px) scale(0.98) rotateX(10deg);
-  filter: blur(8px) brightness(0.8);
-  transition: all 1.1s cubic-bezier(.68,-0.55,.27,1.55);
-  will-change: opacity, transform, filter;
-}
-.designer-section.designer-visible {
-  opacity: 1;
-  transform: translateY(0) scale(1) rotateX(0);
-  filter: blur(0) brightness(1);
-}
+
 @keyframes titlePop {
   0% { transform: scale(0.7) rotate(-8deg); opacity: 0; }
   60% { transform: scale(1.15) rotate(2deg); opacity: 1; }
