@@ -141,14 +141,7 @@
                     <div class="text-sm text-zinc-400 transition-all duration-300 group-hover:text-purple-400">{{ item.status }}</div>
                   </div>
                   
-                  <div class="absolute top-3 right-3 opacity-0 transition-all duration-300 z-20 group-hover:opacity-100 group-hover:scale-110">
-                    <span class="text-sm drop-shadow-lg">{{ getLevel(item.status) }}</span>
-                  </div>
-                  
-                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-zinc-700/50 overflow-hidden">
-                    <div class="h-full bg-gradient-to-r from-purple-500 to-purple-300 shadow-lg shadow-purple-500/50 transition-all duration-600" 
-                         :style="{ width: getProgress(item.status) }"></div>
-                  </div>
+               
                 </div>
               </div>
             </div>
@@ -172,9 +165,7 @@
                     <div class="text-sm text-zinc-400 transition-all duration-300 group-hover:text-purple-400">{{ item.status }}</div>
                   </div>
                   
-                  <div class="absolute top-3 right-3 opacity-0 transition-all duration-300 z-20 group-hover:opacity-100 group-hover:scale-110">
-                    <span class="text-lg">🔧</span>
-                  </div>
+                 
                 </div>
               </div>
             </div>
