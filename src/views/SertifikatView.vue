@@ -120,31 +120,40 @@ export default {
           year: 2023, // Tahun disesuaikan di sini
           image1: '/img/wanteknologi1.jpg',
           image2: '/img/wanteknologi2.jpg',
-          title: 'Sertifikat Membuat Landing Page HTML & CSS',
-          description: 'Sertifikat pembuatan website menggunakan HTML & CSS dari WAN Teknologi. Menguasai fundamental web development dengan praktik langsung membuat landing page responsif dan modern.',
-        },
+          title: 'Sertifikasi Kompetensi Membuat Landing Page Dengan HTML dan CSS',
+          description: 'Penerapan teknik formatting, penerapan teknik layouting, dan penerapan hyperlink.',
+        },  
         {
           id: 2,
           year: 2024, // Tahun disesuaikan di sini
-          image1: '/img/ginvo1.jpg',
-          image2: '/img/ginvo2.jpg',
-          title: 'Sertifikat Sistekdes - Sistem Teknologi Desa',
-          description: 'Penghargaan atas kontribusi dalam pengembangan Sistekdes (Sistem Teknologi Desa). Berpartisipasi aktif dalam digitalisasi layanan administrasi desa dengan teknologi web modern.'
+          image1: '/img/dimensikreyasi2.jpg',
+          image2: '/img/dimensikreyasi.jpg',
+          title: 'Sertifikasi Kompetensi Membangun Website Library Management dengan Framework Laravel',
+          description: 'Penghargaan atas kontribusi dalam pengembangan sistem Bumdesma dari Kreasi Media. Membangun platform digital untuk mendukung ekonomi desa melalui teknologi informasi.'
         },
         {
           id: 3,
           year: 2024, // Tahun disesuaikan di sini
           image1: '/img/kreasimedia1.jpg',
           image2: '/img/kreasimedia2.jpg',
-          title: 'Sertifikat Bumdesma - Badan Usaha Milik Desa Bersama',
-          description: 'Penghargaan atas kontribusi dalam pengembangan sistem Bumdesma dari Kreasi Media. Membangun platform digital untuk mendukung ekonomi desa melalui teknologi informasi.'
+          title: 'Sertifikasi Kompetensi Membangun Website Library Management dengan Framework Laravel',
+          description: 'Membuat Authentication dengan Library Breeze, Merancang Database dengan MySQL pada Pemrograman Framework Laravel, dan Membuat Interface Website dengan Tailwind CSS.'
         },
+       
         {
           id: 4,
+          year: 2024, // Tahun disesuaikan di sini
+          image1: '/img/ginvo1.jpg',
+          image2: '/img/ginvo2.jpg',
+          title: 'Sertifikasi Kompetensi Membangun Fullstack Mobile App dengan Framework React Native dan Laravel',
+          description: 'Frontend: Styling menggunakan TWRNC, Fetching API dari Backend Laravel, Fetching API NewsAPI, dan Fetching API Public. Backend: Membuat RESTful API dengan Laravel, Autentikasi menggunakan Sanctum, dan CRUD Resource API.',
+        },
+        {
+          id: 5,
           year: 2023, // Tahun disesuaikan di sini
           image1: '/img/zeropelanggaran.jpg',
-          title: 'Sertifikat Zero Pelanggaran',
-          description: 'Penghargaan prestasi zero pelanggaran selama periode pembelajaran. Menunjukkan dedikasi, disiplin, dan komitmen tinggi dalam menjalani proses pendidikan dan pengembangan diri.'
+          title: 'Sertifikat Penghargaan Siswa/Siswi Kategori Zero Pelanggaran',
+          description: 'Diberikan atas Pencapaiannya Menjadi Siswa/Siswi dengan Kategori Zero Pelanggaran pada Semester Ganjil Tahun Pelajaran 2024/2025.',
         }
       ]
     }
