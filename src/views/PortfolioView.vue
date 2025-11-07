@@ -243,28 +243,28 @@ export default {
         },
         {
           id: 6,
-          name: 'Landing Page Coffee Shop',
-          imageUrl: 'coffee',
+          name: 'Website Beasiswa',
+          imageUrl: 'beasiswa',
           status: 'Website landing page untuk promosi kedai kopi lokal, desain minimalis dan modern dengan animasi smooth.',
           tech: 'HTML, Tailwind CSS, JavaScript',
-          category: 'frontend',
+          category: 'fullstack',
           github: '',
           demo: ''
         },
         {
           id: 7,
-          name: 'Portfolio V1',
-          imageUrl: 'portfoliov1',
+          name: 'Website Hotel Palem',
+          imageUrl: 'hotelpalem',
           status: 'Versi pertama portfolio pribadi dengan HTML dan CSS dasar. Project pembelajaran fundamental web development.',
           tech: 'HTML, CSS, JavaScript',
-          category: 'frontend',
+          category: 'fullstack',
           github: '',
           demo: ''
         },
         {
           id: 8,
-          name: 'E-Commerce Sederhana',
-          imageUrl: 'ecommerce',
+          name: 'Website Library',
+          imageUrl: 'library',
           status: 'Website toko online sederhana dengan fitur cart, checkout, payment gateway, dan admin dashboard lengkap.',
           tech: 'Laravel 9, Bootstrap, MySQL',
           category: 'fullstack',
@@ -273,11 +273,11 @@ export default {
         },
         {
           id: 9,
-          name: 'Dashboard Admin Panel',
-          imageUrl: 'dashboardadmin',
+          name: 'Website PPDB SMK Pesat',
+          imageUrl: 'ppdbsmkpesat',
           status: 'Dashboard admin responsif untuk mengelola produk, user, dan transaksi dengan charts dan analytics.',
           tech: 'Vue.js, Tailwind CSS, Chart.js',
-          category: 'frontend',
+          category: 'fullstack',
           github: '',
           demo: ''
         },
@@ -303,6 +303,36 @@ export default {
         },
         {
           id: 12,
+          name: 'Event Organizer Platform',
+          imageUrl: 'eventorganizer',
+          status: 'Website untuk promosi event dengan jadwal, lokasi, ticket booking, dan sistem pendaftaran peserta online.',
+          tech: 'ReactJS, Tailwind CSS, Firebase',
+          category: 'frontend',
+          github: '',
+          demo: ''
+        },
+         {
+          id: 13,
+          name: 'Blog Personal Website',
+          imageUrl: 'blogpersonal',
+          status: 'Website blog pribadi untuk menulis artikel dengan sistem kategori, tags, dan komentar user.',
+          tech: 'Laravel 10, Bootstrap, MySQL',
+          category: 'fullstack',
+          github: '',
+          demo: ''
+        },
+        {
+          id: 14,
+          name: 'Company Profile Website',
+          imageUrl: 'companyprofile',
+          status: 'Website profil perusahaan dengan halaman tentang kami, layanan, portfolio, testimonial, dan form kontak.',
+          tech: 'HTML, Tailwind CSS, AOS',
+          category: 'frontend',
+          github: '',
+          demo: ''
+        },
+        {
+          id: 15,
           name: 'Event Organizer Platform',
           imageUrl: 'eventorganizer',
           status: 'Website untuk promosi event dengan jadwal, lokasi, ticket booking, dan sistem pendaftaran peserta online.',
