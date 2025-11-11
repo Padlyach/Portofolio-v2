@@ -228,7 +228,7 @@ export default {
           status: 'Website Berisi Tentang Undangan Pernikahan Yang Menarik, Dengan Desain Perpaduan Warna Merah Dan Putih.',
           tech: 'Laravel 8, JavaScript',
           category: 'fullstack',
-          github: '',
+          github: 'https://github.com/Padlyach/WebWedding-',
           demo: ''
         },
         {

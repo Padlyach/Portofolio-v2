@@ -17,7 +17,7 @@
               <div class="absolute inset-[-15px] bg-gradient-radial from-purple-500/40 to-transparent rounded-full blur-3xl animate-pulse-slow"></div>
               <div class="absolute inset-[-4px] rounded-full bg-gradient-to-r from-purple-500 via-purple-300 to-purple-500 bg-[length:200%_200%] animate-border-rotate"></div>
               <img class="relative w-full h-full object-cover rounded-full border-4 border-zinc-900 shadow-2xl shadow-purple-500/30 hover:scale-105 transition-transform duration-300 z-10"
-                   src="../assets/hitam.jpg"
+                   src="../assets/dloy.jpg"
                    alt="Fadhly Achmad" />
               <div class="absolute bottom-2 right-2 bg-green-500/90 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 text-sm font-semibold text-white border-2 border-green-500/30 z-20 animate-fade-in-scale">
                 <span class="w-2 h-2 bg-white rounded-full animate-blink"></span>

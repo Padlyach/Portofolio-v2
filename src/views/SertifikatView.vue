@@ -125,7 +125,7 @@ export default {
         },  
         {
           id: 2,
-          year: 2024, // Tahun disesuaikan di sini
+          year: 2024,   
           image1: '/img/dimensikreyasi2.jpg',
           image2: '/img/dimensikreyasi.jpg',
           title: 'Sertifikasi Kompetensi Membangun Website Library Management dengan Framework Laravel',
@@ -142,7 +142,7 @@ export default {
        
         {
           id: 4,
-          year: 2024, // Tahun disesuaikan di sini
+          year: 2025,// Tahun disesuaikan di sini
           image1: '/img/ginvo1.jpg',
           image2: '/img/ginvo2.jpg',
           title: 'Sertifikasi Kompetensi Membangun Fullstack Mobile App dengan Framework React Native dan Laravel',
