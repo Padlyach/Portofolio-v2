@@ -154,6 +154,13 @@ export default {
           image1: '/img/zeropelanggaran.jpg',
           title: 'Sertifikat Penghargaan Siswa/Siswi Kategori Zero Pelanggaran',
           description: 'Diberikan atas Pencapaiannya Menjadi Siswa/Siswi dengan Kategori Zero Pelanggaran pada Semester Ganjil Tahun Pelajaran 2024/2025.',
+        },
+        {
+          id: 6,
+          year: 2025, // Tahun disesuaikan di sini
+          image1: '/img/bnsp.jpg',
+          title: 'Surat Hasil Kompetensi dari BNSP',
+          description: 'Diberikan atas hasil pengerjaan BNSP dengan nilai KOMPETEN dan bersertifikat nasional.',
         }
       ]
     }
