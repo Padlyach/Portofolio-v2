@@ -90,7 +90,7 @@
             <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent whitespace-nowrap">Skills & Expertise</h2>
             <div class="h-0.5 flex-1 bg-gradient-to-l from-transparent via-purple-300 to-transparent"></div>
           </div>
-          <p class="text-zinc-400 text-sm md:text-base">Technologies and tools I work with</p>
+          <p class="text-zinc-400 text-sm md:text-base">Technologies dan Tools yang saya gunakan</p>
         </header>
 
         <section>
@@ -187,7 +187,6 @@ export default {
         // Link ditambahkan di sini
         { name: 'GitHub', icon: '💻', link: 'https://github.com/Padlyach' },
         { name: 'LinkedIn', icon: '💼', link: 'https://www.linkedin.com/in/fadhly-achmad/' },
-        { name: 'Email', icon: '✉️', link: 'mailto:ganti_dengan_email_anda@example.com' } // Ganti dengan email Anda yang sebenarnya
       ],
       tech: [
         { id: 1, name: 'HTML', imageUrl: 'https://cdn-icons-png.flaticon.com/512/1051/1051277.png', status: 'Advanced' },

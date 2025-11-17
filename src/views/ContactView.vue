@@ -4,7 +4,7 @@
       <!-- Left: Photo & Description -->
       <div class="flex flex-col items-center justify-center md:w-2/5 px-4">
         <img
-          src="../assets/hitam.jpg"
+          src="../assets/dloy.jpg"
           alt="Profile Photo"
           class="w-32 h-32 rounded-full mb-4 border-4 border-purple-300 pict"
         />

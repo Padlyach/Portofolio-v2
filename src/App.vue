@@ -41,7 +41,7 @@
         <div class="section-header">
           <h2 class="section-title">About Me</h2>
           <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
-           A brief introduction, my skills, and the tools I use to build beautiful digital experiences.
+           Sebuah pengenalan singkat, keterampilan saya, dan alat yang saya gunakan untuk membangun pengalaman digital yang indah.
         </h4>
         </div>
         <AboutView />
@@ -50,7 +50,7 @@
         <div class="section-header">
           <h2 class="section-title">Portfolio</h2>
         <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
-           A showcase of my selected works, projects, and creative solutions.
+           Sebuah pameran karya terpilih, proyek, dan solusi kreatif saya.
         </h4>
         </div>
         <PortfolioView />
@@ -59,7 +59,7 @@
         <div class="section-header">
           <h2 class="section-title">Certificates</h2>
         <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
-          My certifications and achievements, demonstrating my commitment to learning and growth.
+          Sertifikat dan pencapaian saya, yang menunjukkan komitmen saya terhadap pembelajaran dan pertumbuhan.
         </h4>
         </div>
         <div class="certificates-gallery flex flex-wrap justify-center gap-6 py-8">
@@ -71,7 +71,7 @@
         <div class="section-header">
           <h2 class="section-title">Contact</h2>
         <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
-         Let's connect! Reach out for collaborations, questions, or just to say hello.
+         Mari terhubung! Hubungi kami untuk berkolaborasi, bertanya, atau sekadar menyapa.
         </h4>
         </div>
         <ContactView />
