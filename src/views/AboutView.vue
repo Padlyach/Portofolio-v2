@@ -1,12 +1,17 @@
 <template>
   <div class="min-h-screen">
-    <div class="bg-gradient-to-br from-zinc-900/95 to-zinc-800/95 p-5 md:p-12 mx-3 mb-5 border border-zinc-700 rounded-3xl backdrop-blur-lg relative overflow-hidden">
-      <div class="absolute top-0 left-0 right-0 h-48 bg-gradient-radial from-purple-500/15 to-transparent pointer-events-none"></div>
+    <div
+      class="bg-gradient-to-br from-zinc-900/95 to-zinc-800/95 p-5 md:p-12 mx-3 mb-5 border border-zinc-700 rounded-3xl backdrop-blur-lg relative overflow-hidden">
+      <div
+        class="absolute top-0 left-0 right-0 h-48 bg-gradient-radial from-purple-500/15 to-transparent pointer-events-none">
+      </div>
 
       <article class="relative">
         <header class="mb-8">
           <div class="flex items-center gap-4 mb-2 animate-fade-in-down">
-            <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent whitespace-nowrap">About Me</h2>
+            <h2
+              class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent whitespace-nowrap">
+              About Me</h2>
             <div class="h-0.5 flex-1 bg-gradient-to-r from-transparent via-purple-300 to-transparent"></div>
           </div>
         </header>
@@ -14,31 +19,46 @@
         <section class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
           <div class="flex flex-col items-center gap-6 animate-fade-in-up">
             <div class="relative w-56 h-56 md:w-60 md:h-60 lg:w-64 lg:h-64">
-              <div class="absolute inset-[-15px] bg-gradient-radial from-purple-500/40 to-transparent rounded-full blur-3xl animate-pulse-slow"></div>
-              <div class="absolute inset-[-4px] rounded-full bg-gradient-to-r from-purple-500 via-purple-300 to-purple-500 bg-[length:200%_200%] animate-border-rotate"></div>
-              <img class="relative w-full h-full object-cover rounded-full border-4 border-zinc-900 shadow-2xl shadow-purple-500/30 hover:scale-105 transition-transform duration-300 z-10"
-                   src="../assets/dloy.jpg"
-                   alt="Fadhly Achmad" />
-              <div class="absolute bottom-2 right-2 bg-green-500/90 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 text-sm font-semibold text-white border-2 border-green-500/30 z-20 animate-fade-in-scale">
+              <div
+                class="absolute inset-[-15px] bg-gradient-radial from-purple-500/40 to-transparent rounded-full blur-3xl animate-pulse-slow">
+              </div>
+              <div
+                class="absolute inset-[-4px] rounded-full bg-gradient-to-r from-purple-500 via-purple-300 to-purple-500 bg-[length:200%_200%] animate-border-rotate">
+              </div>
+              <img
+                class="relative w-full h-full object-cover rounded-full border-4 border-zinc-900 shadow-2xl shadow-purple-500/30 hover:scale-105 transition-transform duration-300 z-10"
+                src="../assets/dloy.jpg" alt="Fadhly Achmad" />
+              <div
+                class="absolute bottom-2 right-2 bg-green-500/90 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 text-sm font-semibold text-white border-2 border-green-500/30 z-20 animate-fade-in-scale">
                 <span class="w-2 h-2 bg-white rounded-full animate-blink"></span>
                 Available
               </div>
+              <!-- <div
+                class="absolute bottom-2 right-2 bg-red-500/90 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 text-sm font-semibold text-white border-2 border-red-500/30 z-20 animate-fade-in-scale">
+                <span class="w-2 h-2 bg-white rounded-full animate-blink"></span>
+                Unavailable
+              </div> -->
             </div>
 
             <div class="flex gap-8 animate-fade-in-up-delay">
               <div class="text-center">
-                <div class="text-3xl font-bold bg-gradient-to-br from-purple-300 to-purple-500 bg-clip-text text-transparent">8+</div>
+                <div
+                  class="text-3xl font-bold bg-gradient-to-br from-purple-300 to-purple-500 bg-clip-text text-transparent">
+                  9+</div>
                 <div class="text-sm text-zinc-400 mt-1">Technologies</div>
               </div>
               <div class="text-center">
-                <div class="text-3xl font-bold bg-gradient-to-br from-purple-300 to-purple-500 bg-clip-text text-transparent">3+</div>
+                <div
+                  class="text-3xl font-bold bg-gradient-to-br from-purple-300 to-purple-500 bg-clip-text text-transparent">
+                  5+</div>
                 <div class="text-sm text-zinc-400 mt-1">Tools</div>
               </div>
             </div>
           </div>
 
           <div class="flex flex-col gap-6 w-full animate-fade-in-left">
-            <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/30 px-4 py-2 rounded-full w-fit text-sm text-purple-300 animate-fade-in-up">
+            <div
+              class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/30 px-4 py-2 rounded-full w-fit text-sm text-purple-300 animate-fade-in-up">
               <span class="text-lg animate-wave">👋</span>
               <span>Hello, I'm</span>
             </div>
@@ -46,8 +66,12 @@
             <h3 class="text-4xl font-bold text-white animate-fade-in-up-delay">Fadhly Achmad</h3>
 
             <p class="text-zinc-300 leading-relaxed text-justify opacity-0 animate-fade-in-up-delay-2">
-              Seorang siswa di <span class="text-purple-300 font-semibold relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-gradient-to-r after:from-transparent after:via-purple-300 after:to-transparent after:opacity-50">SMK Informatika Pesat</span> jurusan
-              <span class="text-purple-300 font-semibold relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-gradient-to-r after:from-transparent after:via-purple-300 after:to-transparent after:opacity-50">Rekayasa Perangkat Lunak (RPL)</span>.
+              Seorang siswa di <span
+                class="text-purple-300 font-semibold relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-gradient-to-r after:from-transparent after:via-purple-300 after:to-transparent after:opacity-50">SMK
+                Informatika Pesat</span> jurusan
+              <span
+                class="text-purple-300 font-semibold relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-gradient-to-r after:from-transparent after:via-purple-300 after:to-transparent after:opacity-50">Rekayasa
+                Perangkat Lunak (RPL)</span>.
               Saya antusias dengan dunia teknologi dan pengembangan perangkat lunak.
             </p>
 
@@ -59,8 +83,10 @@
 
             <div class="grid grid-cols-2 gap-4 mt-4">
               <div v-for="(card, index) in infoCards" :key="index"
-                  class="relative flex items-center gap-3 bg-zinc-700/30 border border-zinc-600 rounded-xl p-4 transition-all duration-300 hover:bg-purple-500/10 hover:border-purple-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/30 overflow-hidden group">
-                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-shine"></div>
+                class="relative flex items-center gap-3 bg-zinc-700/30 border border-zinc-600 rounded-xl p-4 transition-all duration-300 hover:bg-purple-500/10 hover:border-purple-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/30 overflow-hidden group">
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-shine">
+                </div>
                 <div class="text-3xl drop-shadow-lg">{{ card.icon }}</div>
                 <div class="flex-1 z-10">
                   <div class="text-xs text-zinc-400 mb-1">{{ card.label }}</div>
@@ -87,7 +113,9 @@
       <article>
         <header class="mb-8">
           <div class="flex items-center gap-4 mb-2 flex-row-reverse animate-fade-in-down">
-            <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent whitespace-nowrap">Skills & Expertise</h2>
+            <h2
+              class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent whitespace-nowrap">
+              Skills & Expertise</h2>
             <div class="h-0.5 flex-1 bg-gradient-to-l from-transparent via-purple-300 to-transparent"></div>
           </div>
           <p class="text-zinc-400 text-sm md:text-base">Technologies dan Tools yang saya gunakan</p>
@@ -97,25 +125,29 @@
           <div class="mb-8">
             <ul class="flex flex-wrap gap-3 list-none">
               <li>
-                <button
-                  @click="activeTab = 1"
+                <button @click="activeTab = 1"
                   :class="['flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm md:text-base font-semibold transition-all duration-300 relative overflow-hidden',
-                            activeTab === 1 ? 'text-purple-300 bg-purple-500/15 border border-purple-500 shadow-lg shadow-purple-500/25' : 'text-zinc-400 bg-zinc-800/50 border border-zinc-700 hover:text-white hover:bg-zinc-700/50 hover:-translate-y-1']">
-                  <span class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 transition-opacity duration-300" :class="{'opacity-100': activeTab === 1}"></span>
+                    activeTab === 1 ? 'text-purple-300 bg-purple-500/15 border border-purple-500 shadow-lg shadow-purple-500/25' : 'text-zinc-400 bg-zinc-800/50 border border-zinc-700 hover:text-white hover:bg-zinc-700/50 hover:-translate-y-1']">
+                  <span
+                    class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 transition-opacity duration-300"
+                    :class="{ 'opacity-100': activeTab === 1 }"></span>
                   <span class="text-xl relative">⚡</span>
                   <span class="relative">Tech Stack</span>
-                  <span class="bg-purple-500/30 px-2 py-0.5 rounded-full text-xs font-bold relative">{{ tech.length }}</span>
+                  <span class="bg-purple-500/30 px-2 py-0.5 rounded-full text-xs font-bold relative">{{ tech.length
+                    }}</span>
                 </button>
               </li>
               <li>
-                <button
-                  @click="activeTab = 2"
+                <button @click="activeTab = 2"
                   :class="['flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm md:text-base font-semibold transition-all duration-300 relative overflow-hidden',
-                            activeTab === 2 ? 'text-purple-300 bg-purple-500/15 border border-purple-500 shadow-lg shadow-purple-500/25' : 'text-zinc-400 bg-zinc-800/50 border border-zinc-700 hover:text-white hover:bg-zinc-700/50 hover:-translate-y-1']">
-                  <span class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 transition-opacity duration-300" :class="{'opacity-100': activeTab === 2}"></span>
+                    activeTab === 2 ? 'text-purple-300 bg-purple-500/15 border border-purple-500 shadow-lg shadow-purple-500/25' : 'text-zinc-400 bg-zinc-800/50 border border-zinc-700 hover:text-white hover:bg-zinc-700/50 hover:-translate-y-1']">
+                  <span
+                    class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 transition-opacity duration-300"
+                    :class="{ 'opacity-100': activeTab === 2 }"></span>
                   <span class="text-xl relative">🛠️</span>
                   <span class="relative">Tools</span>
-                  <span class="bg-purple-500/30 px-2 py-0.5 rounded-full text-xs font-bold relative">{{ tools.length }}</span>
+                  <span class="bg-purple-500/30 px-2 py-0.5 rounded-full text-xs font-bold relative">{{ tools.length
+                    }}</span>
                 </button>
               </li>
             </ul>
@@ -123,19 +155,26 @@
 
           <div v-show="activeTab === 1" class="animate-fade-in">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 pb-8">
-              <div v-for="(item, index) in tech" :key="item.id"
-                    class="animate-fade-in-scale"
-                    :style="{ animationDelay: index * 0.05 + 's' }">
-                <div class="relative flex flex-col gap-3 p-5 bg-zinc-900/60 border border-zinc-700 rounded-xl cursor-pointer transition-all duration-400 overflow-hidden h-full group hover:bg-zinc-800/80 hover:border-purple-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-500/20">
-                  <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div v-for="(item, index) in tech" :key="item.id" class="animate-fade-in-scale"
+                :style="{ animationDelay: index * 0.05 + 's' }">
+                <div
+                  class="relative flex flex-col gap-3 p-5 bg-zinc-900/60 border border-zinc-700 rounded-xl cursor-pointer transition-all duration-400 overflow-hidden h-full group hover:bg-zinc-800/80 hover:border-purple-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-500/20">
+                  <div
+                    class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  </div>
 
-                  <div class="relative flex items-center justify-center w-full h-16 bg-zinc-700/30 rounded-xl transition-all duration-400 group-hover:bg-purple-500/15 group-hover:scale-105">
-                    <img :src="item.imageUrl" :alt="item.name" class="w-10 h-10 object-contain transition-transform duration-400 group-hover:scale-110 group-hover:rotate-6" />
+                  <div
+                    class="relative flex items-center justify-center w-full h-16 bg-zinc-700/30 rounded-xl transition-all duration-400 group-hover:bg-purple-500/15 group-hover:scale-105">
+                    <img :src="item.imageUrl" :alt="item.name"
+                      class="w-10 h-10 object-contain transition-transform duration-400 group-hover:scale-110 group-hover:rotate-6" />
                   </div>
 
                   <div class="flex-1 z-10">
-                    <div class="text-base font-semibold text-white transition-all duration-300 group-hover:text-purple-300">{{ item.name }}</div>
-                    <div class="text-sm text-zinc-400 transition-all duration-300 group-hover:text-purple-400">{{ item.status }}</div>
+                    <div
+                      class="text-base font-semibold text-white transition-all duration-300 group-hover:text-purple-300">
+                      {{ item.name }}</div>
+                    <div class="text-sm text-zinc-400 transition-all duration-300 group-hover:text-purple-400">{{
+                      item.status }}</div>
                   </div>
 
 
@@ -146,19 +185,26 @@
 
           <div v-show="activeTab === 2" class="animate-fade-in">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 pb-8">
-              <div v-for="(item, index) in tools" :key="item.id"
-                    class="animate-fade-in-scale"
-                    :style="{ animationDelay: index * 0.05 + 's' }">
-                <div class="relative flex flex-col gap-3 p-5 bg-zinc-900/60 border border-zinc-700 rounded-xl cursor-pointer transition-all duration-400 overflow-hidden h-full group hover:bg-zinc-800/80 hover:border-purple-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-500/20">
-                  <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div v-for="(item, index) in tools" :key="item.id" class="animate-fade-in-scale"
+                :style="{ animationDelay: index * 0.05 + 's' }">
+                <div
+                  class="relative flex flex-col gap-3 p-5 bg-zinc-900/60 border border-zinc-700 rounded-xl cursor-pointer transition-all duration-400 overflow-hidden h-full group hover:bg-zinc-800/80 hover:border-purple-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-500/20">
+                  <div
+                    class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  </div>
 
-                  <div class="relative flex items-center justify-center w-full h-16 bg-zinc-700/30 rounded-xl transition-all duration-400 group-hover:bg-purple-500/15 group-hover:scale-105">
-                    <img :src="item.imageUrl" :alt="item.name" class="w-10 h-10 object-contain transition-transform duration-400 group-hover:scale-110 group-hover:rotate-6" />
+                  <div
+                    class="relative flex items-center justify-center w-full h-16 bg-zinc-700/30 rounded-xl transition-all duration-400 group-hover:bg-purple-500/15 group-hover:scale-105">
+                    <img :src="item.imageUrl" :alt="item.name"
+                      class="w-10 h-10 object-contain transition-transform duration-400 group-hover:scale-110 group-hover:rotate-6" />
                   </div>
 
                   <div class="flex-1 z-10">
-                    <div class="text-base font-semibold text-white transition-all duration-300 group-hover:text-purple-300">{{ item.name }}</div>
-                    <div class="text-sm text-zinc-400 transition-all duration-300 group-hover:text-purple-400">{{ item.status }}</div>
+                    <div
+                      class="text-base font-semibold text-white transition-all duration-300 group-hover:text-purple-300">
+                      {{ item.name }}</div>
+                    <div class="text-sm text-zinc-400 transition-all duration-300 group-hover:text-purple-400">{{
+                      item.status }}</div>
                   </div>
 
 
@@ -202,7 +248,9 @@ export default {
       tools: [
         { id: 1, name: 'Git', imageUrl: 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png', status: 'Version Control' },
         { id: 2, name: 'GitHub', imageUrl: 'https://cdn-icons-png.flaticon.com/512/25/25231.png', status: 'Git Hosting' },
-        { id: 4, name: 'MySQL', imageUrl: 'https://cdn-icons-png.flaticon.com/512/5968/5968313.png', status: 'Database' }
+        { id: 4, name: 'MySQL', imageUrl: 'https://cdn-icons-png.flaticon.com/512/5968/5968313.png', status: 'Database' },
+        { id: 5, name: 'Discord', imageUrl: 'https://cdn-icons-png.flaticon.com/512/2111/2111370.png', status: 'Communication' },
+        { id: 6, name: 'LinkedIn', imageUrl: 'https://cdn-icons-png.flaticon.com/512/174/174857.png', status: 'Professional Network' },
       ]
     };
   },
@@ -258,6 +306,7 @@ export default {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -269,6 +318,7 @@ export default {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -280,6 +330,7 @@ export default {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -291,6 +342,7 @@ export default {
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -301,27 +353,35 @@ export default {
   0% {
     background-position: 0% 50%;
   }
+
   100% {
     background-position: 200% 50%;
   }
 }
 
 @keyframes blink {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.4;
   }
 }
 
 @keyframes wave {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(20deg);
   }
+
   75% {
     transform: rotate(-20deg);
   }
@@ -331,6 +391,7 @@ export default {
   0% {
     transform: translateX(-100%) translateY(-100%) rotate(45deg);
   }
+
   100% {
     transform: translateX(100%) translateY(100%) rotate(45deg);
   }
@@ -377,10 +438,13 @@ export default {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.6;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.8;
     transform: scale(1.05);
