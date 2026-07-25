@@ -2,11 +2,11 @@
   <main
     class="mt-0 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[60vh]">
     <div class="space-y-2 text-center md:text-left px-10">
-      <p class="text-purple-300">Hello, I'm</p>
+      <p class="text-zinc-300">Hello, I'm</p>
       <h1 class="text-4xl font-bold md:text-5xl text-white fadein-up">Fadhly Achmad</h1>
       <div class="py-2">
         <h1
-          class="typewrite text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-500 md:text-2xl fadein-up"
+          class="typewrite text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-zinc-400 md:text-2xl fadein-up"
           ref="typewriter">
           <span class="wrap">{{ txt }}</span>
         </h1>
@@ -18,7 +18,7 @@
       <!-- Optional Resume Button -->
       <!--
       <button
-        class="fadein-bot fade-500 flex items-center py-2 px-4 mx-auto text-sm font-medium rounded-lg border transition duration-300 md:py-2.5 md:px-5 md:mx-0 text-purple-300 border-purple-300 hover:bg-purple-300 hover:bg-opacity-10 bg-transparent focus:outline-none w-fit">
+        class="fadein-bot fade-500 flex items-center py-2 px-4 mx-auto text-sm font-medium rounded-lg border transition duration-300 md:py-2.5 md:px-5 md:mx-0 text-zinc-300 border-zinc-300 hover:bg-zinc-300 hover:bg-opacity-10 bg-transparent focus:outline-none w-fit">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-2 w-4 h-4">
           <path fill-rule="evenodd"
             d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm5.845 17.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V12a.75.75 0 00-1.5 0v4.19l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z"
@@ -33,8 +33,8 @@
     </div>
     <div class="flex justify-center md:justify-start fadein-right">
       <img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
-        class="w-70 md:h-auto rounded-full border-4 border-purple-300 pict"
-        src="../assets/dloy.jpg">
+        class="w-70 md:h-auto rounded-full border-4 border-zinc-300 pict"
+        src="../assets/hitam.jpg">
     </div>
   </main>
 </template>
@@ -122,9 +122,9 @@ body {
 }
 
 .pict {
-  box-shadow: 0px 0px 73px -9px rgba(128, 0, 128, 0.44);
-  -webkit-box-shadow: 0px 0px 73px -9px rgba(128, 0, 128, 0.44);
-  -moz-box-shadow: 0px 0px 73px -9px rgba(128, 0, 128, 0.44);
+  box-shadow: 0px 0px 73px -9px rgba(255, 255, 255, 0.35);
+  -webkit-box-shadow: 0px 0px 73px -9px rgba(255, 255, 255, 0.35);
+  -moz-box-shadow: 0px 0px 73px -9px rgba(255, 255, 255, 0.35);
 }
 
 .fadein-up {
@@ -200,4 +200,4 @@ body {
 .fadein-2 { animation-delay: 400ms; }
 .fadein-3 { animation-delay: 600ms; }
 .fade-500 { animation-delay: 500ms; }
-</style> 
+</style>

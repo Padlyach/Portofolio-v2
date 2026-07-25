@@ -4,12 +4,12 @@
     <nav class="max-w-7xl px-5 fixed top-0 z-[98] w-screen backdrop-blur-md bg-[#121212] bg-opacity-80">
       <div class="container mx-auto flex flex-wrap items-center justify-between">
         <a href="#home" class="flex">
-          <span class="self-center text-lg text-[#a855f7] font-semibold whitespace-nowrap fadein-bot hover:text-purple-300">Fadhly Achmad</span>
+          <span class="self-center text-lg text-zinc-200 font-semibold whitespace-nowrap fadein-bot hover:text-white">Fadhly Achmad</span>
         </a>
         <div class="flex md:order-2 fadein-bot">
           <div class="flex md:order-2 fadein-bot">
   <a href="https://github.com/Padlyach" target="_blank" class="flex items-center justify-center w-9 h-9">
-    <svg class="w-7 h-7 text-white hover:text-[#a855f7] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.38-2.03 1.01-2.75-.1-.26-.44-1.3.1-2.7 0 0 .83-.27 2.73 1.02A9.18 9.18 0 0 1 12 6.84c.84.004 1.68.11 2.47.32 1.9-1.29 2.73-1.02 2.73-1.02.54 1.4.2 2.44.1 2.7.63.72 1.01 1.63 1.01 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+    <svg class="w-7 h-7 text-white hover:text-zinc-300 transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.38-2.03 1.01-2.75-.1-.26-.44-1.3.1-2.7 0 0 .83-.27 2.73 1.02A9.18 9.18 0 0 1 12 6.84c.84.004 1.68.11 2.47.32 1.9-1.29 2.73-1.02 2.73-1.02.54 1.4.2 2.44.1 2.7.63.72 1.01 1.63 1.01 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
   </a>
 </div>
         </div>
@@ -40,7 +40,7 @@
       <section id="about" class="min-h-screen pt-10 section designer-section">
         <div class="section-header">
           <h2 class="section-title">About Me</h2>
-          <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
+          <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-zinc-400">
            Sebuah pengenalan singkat, keterampilan saya, dan alat yang saya gunakan untuk membangun pengalaman digital yang indah.
         </h4>
         </div>
@@ -49,7 +49,7 @@
       <section id="portfolio" class="min-h-screen pt-10 section designer-section">
         <div class="section-header">
           <h2 class="section-title">Portfolio</h2>
-        <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
+        <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-zinc-400">
            Sebuah pameran karya terpilih, proyek, dan solusi kreatif saya.
         </h4>
         </div>
@@ -58,7 +58,7 @@
       <section id="sertifikat" class="min-h-screen pt-20 section designer-section">
         <div class="section-header">
           <h2 class="section-title">Certificates</h2>
-        <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
+        <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-zinc-400">
           Sertifikat dan pencapaian saya, yang menunjukkan komitmen saya terhadap pembelajaran dan pertumbuhan.
         </h4>
         </div>
@@ -70,7 +70,7 @@
       <section id="contact" class="min-h-screen pt-10 section designer-section">
         <div class="section-header">
           <h2 class="section-title">Contact</h2>
-        <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-purple-400">
+        <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-zinc-400">
          Mari terhubung! Hubungi kami untuk berkolaborasi, bertanya, atau sekadar menyapa.
         </h4>
         </div>
@@ -119,11 +119,11 @@
             <p class="footer-desc">Let's collaborate on your next project. Reach out via email or connect on social media for a quick chat.</p>
             <div class="mt-4 space-y-2 text-sm text-gray-400">
                 <div class="flex items-center space-x-2">
-                    <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4z" fill="none"/><path d="M20 4H4v16h16V4zm-2 2v12H6V6h12z"/></svg>
+                    <svg class="w-5 h-5 text-zinc-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4z" fill="none"/><path d="M20 4H4v16h16V4zm-2 2v12H6V6h12z"/></svg>
                     <span>fadhlyach2007@gmail.com</span>
                 </div>
                 <div class="flex items-center space-x-2">
-                    <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    <svg class="w-5 h-5 text-zinc-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                     <span>Fadhly Achmad</span>
                 </div>
             </div>
@@ -260,7 +260,7 @@ export default {
   left: 0;
   width: 0;
   height: 2px;
-  background: #a855f7;
+  background: #d4d4d8;
   transition: width 0.3s ease;
 }
 
@@ -299,7 +299,7 @@ export default {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a855f7;
+  background: #71717a;
   border-radius: 5px;
 }
 
@@ -341,7 +341,7 @@ nav a.router-link-exact-active::after {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: #a855f7;
+  background-color: #d4d4d8;
 }
 
 nav a.router-link-exact-active:hover {
@@ -358,9 +358,9 @@ nav a.router-link-exact-active:hover {
   font-size: 2.5rem;
   font-weight: 800;
   letter-spacing: 0.05em;
-  color: #a855f7;
+  color: #e4e4e7;
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 16px #a855f7aa, 0 1px 0 #fff;
+  text-shadow: 0 2px 16px rgba(255, 255, 255, 0.35), 0 1px 0 #fff;
   animation: titlePop 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
 }
 .section-desc {
@@ -374,11 +374,11 @@ nav a.router-link-exact-active:hover {
   width: 320px;
   max-width: 90vw;
   height: auto;
-  border: 3px solid #a855f7;
+  border: 3px solid #71717a;
   background: #18181b;
   object-fit: cover;
   margin-bottom: 1.5rem;
-  box-shadow: 0 8px 32px 0 #a855f7aa;
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.25);
 }
 
 
@@ -401,8 +401,8 @@ nav a.router-link-exact-active:hover {
 :root {
   --color-dark-bg-start: #1a1a1e; 
   --color-dark-bg-end: #232327; 
-  --color-primary-purple: #a855f7; 
-  --color-secondary-accent: #8b5cf6; 
+  --color-primary-accent: #d4d4d8; 
+  --color-secondary-accent: #a1a1aa; 
   --color-text-base: #e0e0e0;
   --color-text-secondary: #bdbdbd;
 }
@@ -414,7 +414,7 @@ nav a.router-link-exact-active:hover {
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
   /* Shadow dipertahankan untuk pemisahan */
-  box-shadow: 0 -6px 20px 0 rgba(168, 85, 247, 0.2);
+  box-shadow: 0 -6px 20px 0 rgba(255, 255, 255, 0.12);
 }
 
 .bg-dark-gradient {
@@ -425,9 +425,9 @@ nav a.router-link-exact-active:hover {
   font-size: 1.3rem; 
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: var(--color-primary-purple);
+  color: var(--color-primary-accent);
   margin-bottom: 1rem;
-  text-shadow: 0 1px 4px rgba(168, 85, 247, 0.5);
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.3);
   position: relative;
 }
 
@@ -437,7 +437,7 @@ nav a.router-link-exact-active:hover {
   width: 32px; 
   height: 2px; 
   border-radius: 1px;
-  background: var(--color-primary-purple);
+  background: var(--color-primary-accent);
   margin-top: 0.3rem;
 }
 
@@ -467,38 +467,39 @@ nav a.router-link-exact-active:hover {
     border-radius: 0.5rem;
     /* Background sedikit lebih terang dari footer */
     background-color: var(--color-dark-bg-end); 
-    border: 1px solid rgba(168, 85, 247, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     transition: all 0.25s;
 }
 
 .footer-nav-btn:hover {
-    color: #fff;
-    /* Hover berubah menjadi warna ungu utama */
-    background-color: var(--color-primary-purple); 
-    border-color: var(--color-primary-purple);
-    box-shadow: 0 2px 8px 0 rgba(168, 85, 247, 0.6);
+    color: #18181b;
+    /* Hover berubah menjadi warna terang monokrom */
+    background-color: var(--color-primary-accent); 
+    border-color: var(--color-primary-accent);
+    box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.35);
     transform: translateY(-1px);
 }
 /* --- End Navigation Buttons --- */
 
 .footer-btn-contact {
   display: inline-block;
-  background: var(--color-primary-purple);
-  color: #fff;
+  background: var(--color-primary-accent);
+  color: #18181b;
   font-weight: 600;
   border: none;
   border-radius: 0.5rem; 
   padding: 0.7rem 1.8rem;
   font-size: 1rem;
   letter-spacing: 0.03em;
-  box-shadow: 0 2px 10px 0 rgba(168, 85, 247, 0.6);
+  box-shadow: 0 2px 10px 0 rgba(255, 255, 255, 0.35);
   transition: all 0.3s;
   text-align: center;
 }
 .footer-btn-contact:hover {
   background: var(--color-secondary-accent);
+  color: #18181b;
   transform: translateY(-1px);
-  box-shadow: 0 4px 15px 0 rgba(168, 85, 247, 0.8);
+  box-shadow: 0 4px 15px 0 rgba(255, 255, 255, 0.5);
 }
 
 
@@ -511,8 +512,8 @@ nav a.router-link-exact-active:hover {
   height: 40px;
   border-radius: 50%;
   background-color: var(--color-dark-bg-end); 
-  border: 1px solid var(--color-primary-purple);
-  color: var(--color-primary-purple);
+  border: 1px solid var(--color-primary-accent);
+  color: var(--color-primary-accent);
   transition: all 0.2s;
 }
 
@@ -522,10 +523,10 @@ nav a.router-link-exact-active:hover {
 }
 
 .footer-social:hover {
-  background-color: var(--color-primary-purple);
-  color: #fff;
+  background-color: var(--color-primary-accent);
+  color: #18181b;
   transform: translateY(-2px);
-  box-shadow: 0 2px 10px 0 rgba(168, 85, 247, 0.8);
+  box-shadow: 0 2px 10px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* --- Responsive Adjustments --- */

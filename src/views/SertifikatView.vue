@@ -6,12 +6,12 @@
       <div
         v-for="(certificate, index) in certificates"
         :key="certificate.id"
-        class="group relative bg-zinc-800/90 border border-zinc-700 rounded-2xl overflow-hidden transition-all duration-500 hover:border-purple-500 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-2 animate-fade-in-up"
+        class="group relative bg-zinc-800/90 border border-zinc-700 rounded-2xl overflow-hidden transition-all duration-500 hover:border-zinc-400 hover:shadow-2xl hover:shadow-white/10 hover:-translate-y-2 animate-fade-in-up"
         :style="{ animationDelay: index * 0.15 + 's' }">
         
-        <div class="absolute inset-0 bg-gradient-radial from-purple-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-radial from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
-        <div class="absolute top-4 left-4 z-20 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-purple-500/50">
+        <div class="absolute top-4 left-4 z-20 w-12 h-12 bg-zinc-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-white/20 border border-zinc-500">
           {{ certificate.id }}
         </div>
 
@@ -19,7 +19,7 @@
 
         <div class="p-6 md:p-8">
           <div v-if="certificate.image2" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <div class="relative group/img overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800 hover:border-purple-500/50 transition-all duration-300 aspect-[4/3]">
+            <div class="relative group/img overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all duration-300 aspect-[4/3]">
               <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/30 to-transparent z-10 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300"></div>
               <img
                 :src="certificate.image1"
@@ -33,7 +33,7 @@
               </div>
             </div>
 
-            <div class="relative group/img overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800 hover:border-purple-500/50 transition-all duration-300 aspect-[4/3]">
+            <div class="relative group/img overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all duration-300 aspect-[4/3]">
               <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/30 to-transparent z-10 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300"></div>
               <img
                 :src="certificate.image2"
@@ -49,7 +49,7 @@
           </div>
 
           <div v-else class="mb-6">
-            <div class="relative group/img overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800 hover:border-purple-500/50 transition-all duration-300 mx-auto max-w-4xl aspect-[16/10]">
+            <div class="relative group/img overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-all duration-300 mx-auto max-w-4xl aspect-[16/10]">
               <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/30 to-transparent z-10 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300"></div>
               <img
                 :src="certificate.image1"
@@ -68,8 +68,8 @@
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div class="flex-1">
                 <div class="flex items-center gap-2 mb-3">
-                  <div class="w-1 h-8 bg-purple-500 rounded-full"></div>
-                  <h2 class="text-xl md:text-2xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300">
+                  <div class="w-1 h-8 bg-zinc-400 rounded-full"></div>
+                  <h2 class="text-xl md:text-2xl font-bold text-white group-hover:text-zinc-200 transition-colors duration-300">
                     {{ certificate.title }}
                   </h2>
                 </div>
@@ -79,7 +79,7 @@
                 
                 <div class="flex flex-wrap gap-3 mt-4 pl-3">
                   <div class="flex items-center gap-2 px-3 py-1.5 bg-zinc-800/50 border border-zinc-700 rounded-lg text-xs text-zinc-300">
-                    <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>Verified</span>
@@ -102,7 +102,7 @@
           </div>
         </div>
 
-        <div class="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-purple-500/5 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-white/5 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       </div>
     </div>
   </div>

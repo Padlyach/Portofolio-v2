@@ -6,8 +6,8 @@
 
         <!-- Stats Cards -->
         <div class="flex flex-wrap justify-center gap-4">
-          <div class="bg-zinc-900/60 border border-zinc-700 rounded-xl px-6 py-4 backdrop-blur-lg hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
-            <div class="text-3xl font-bold bg-gradient-to-br from-purple-300 to-purple-500 bg-clip-text text-transparent">{{ items.length }}</div>
+          <div class="bg-zinc-900/60 border border-zinc-700 rounded-xl px-6 py-4 backdrop-blur-lg hover:border-zinc-400 hover:shadow-lg hover:shadow-white/10 transition-all duration-300">
+            <div class="text-3xl font-bold bg-gradient-to-br from-white to-zinc-400 bg-clip-text text-transparent">{{ items.length }}</div>
             <div class="text-xs text-zinc-400 mt-1">Total Projects</div>
           </div>
           <div class="bg-zinc-900/60 border border-zinc-700 rounded-xl px-6 py-4 backdrop-blur-lg hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
@@ -28,12 +28,12 @@
           :class="[
             'flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300',
             activeFilter === 'all' 
-              ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/30 scale-105' 
+              ? 'bg-white text-zinc-900 shadow-lg shadow-white/30 scale-105' 
               : 'bg-zinc-800/50 text-zinc-400 border border-zinc-700 hover:bg-zinc-700/50 hover:text-white hover:border-zinc-600'
           ]">
           <span class="text-lg">🎨</span>
           <span>All Projects</span>
-          <span class="bg-white/20 px-2 py-0.5 rounded-full text-xs">{{ items.length }}</span>
+          <span class="bg-black/10 px-2 py-0.5 rounded-full text-xs">{{ items.length }}</span>
         </button>
         
         <button 
@@ -75,12 +75,12 @@
             <div 
               @mouseenter="hoveredId = item.id" 
               @mouseleave="hoveredId = null"
-              class="group relative bg-zinc-900/60 border border-zinc-700 rounded-2xl overflow-hidden transition-all duration-500 hover:border-purple-500 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-2 h-full flex flex-col">
+              class="group relative bg-zinc-900/60 border border-zinc-700 rounded-2xl overflow-hidden transition-all duration-500 hover:border-zinc-400 hover:shadow-2xl hover:shadow-white/10 hover:-translate-y-2 h-full flex flex-col">
               
               <!-- Hover Glow Effect -->
               <div 
                 :class="[
-                  'absolute inset-0 bg-gradient-radial from-purple-500/20 via-transparent to-transparent rounded-2xl opacity-0 transition-opacity duration-500 pointer-events-none',
+                  'absolute inset-0 bg-gradient-radial from-white/15 via-transparent to-transparent rounded-2xl opacity-0 transition-opacity duration-500 pointer-events-none',
                   hoveredId === item.id ? 'opacity-100' : ''
                 ]">
               </div>
@@ -108,14 +108,14 @@
                 </div>
 
                 <!-- Project Number -->
-                <div class="absolute top-3 left-3 z-20 w-10 h-10 bg-zinc-900/90 backdrop-blur-md border border-zinc-700 rounded-full flex items-center justify-center text-purple-300 font-bold text-sm">
+                <div class="absolute top-3 left-3 z-20 w-10 h-10 bg-zinc-900/90 backdrop-blur-md border border-zinc-700 rounded-full flex items-center justify-center text-zinc-200 font-bold text-sm">
                   {{ item.id }}
                 </div>
               </div>
 
               <!-- Card Content -->
               <div class="p-5 flex flex-col gap-3 flex-1 relative z-10">
-                <h3 class="text-lg font-bold text-white group-hover:text-purple-300 transition-colors duration-300 line-clamp-1">
+                <h3 class="text-lg font-bold text-white group-hover:text-zinc-200 transition-colors duration-300 line-clamp-1">
                   {{ item.name }}
                 </h3>
                 
@@ -128,7 +128,7 @@
                   <span 
                     v-for="(tech, idx) in item.tech.split(',')" 
                     :key="idx" 
-                    class="px-2.5 py-1 bg-zinc-800/50 border border-zinc-700 text-purple-300 text-xs font-medium rounded-lg hover:bg-purple-500/10 hover:border-purple-500/50 transition-all duration-300">
+                    class="px-2.5 py-1 bg-zinc-800/50 border border-zinc-700 text-zinc-200 text-xs font-medium rounded-lg hover:bg-white/10 hover:border-zinc-400/50 transition-all duration-300">
                     {{ tech.trim() }}
                   </span>
                 </div>
@@ -159,7 +159,7 @@
                     :class="[
                       'flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300',
                       isValidLink(item.demo)
-                        ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/30 hover:bg-purple-600 hover:shadow-purple-500/40'
+                        ? 'bg-white text-zinc-900 shadow-lg shadow-white/30 hover:bg-zinc-200 hover:shadow-white/40'
                         : 'bg-zinc-900 text-zinc-600 border border-zinc-800 cursor-not-allowed'
                     ]"
                     @click="handleLinkClick($event, item.demo)">
@@ -223,12 +223,12 @@ export default {
         },
         {
           id: 4,
-          name: 'Website Undangan Pernikahan',
-          imageUrl: 'nikah',
-          status: 'Website Berisi Tentang Undangan Pernikahan Yang Menarik, Dengan Desain Perpaduan Warna Merah Dan Putih.',
-          tech: 'HTML, CSS, JavaScript',
+          name: 'Website BNSP Hotel',
+          imageUrl: 'bnsphotel',
+          status: 'Website Hotel Yang di buat responsif menggunakan framwork Laravel serta database Mysql.',
+          tech: 'Laravel 12 , Tailwind CSS, JS , PHP, MySQL ',
           category: 'fullstack',
-          github: 'https://github.com/Padlyach/WebWedding-',
+          github: '',
           demo: ''
         },
         {
@@ -281,16 +281,7 @@ export default {
           github: 'https://github.com/Padlyach/PPDB_FE',
           demo: ''
         },
-        {
-          id: 10,
-          name: 'Website BNSP Hotel',
-          imageUrl: 'bnsphotel',
-          status: 'Website Hotel Yang di buat responsif menggunakan framwork Laravel serta database Mysql.',
-          tech: 'Laravel 12 , Tailwind CSS, JS , PHP, MySQL ',
-          category: 'fullstack',
-          github: '',
-          demo: ''
-        },
+     
        
       ]
     };
