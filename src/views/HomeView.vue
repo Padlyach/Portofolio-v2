@@ -1,6 +1,10 @@
 <template>
-  <main
-    class="mt-0 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[60vh]">
+  <div>
+    <!-- Particle background (added) -->
+    <canvas ref="particleCanvas" class="particle-bg"></canvas>
+
+    <main
+      class="mt-0 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[60vh]">
     <div class="space-y-2 text-center md:text-left px-10">
       <p class="text-zinc-300">Hello, I'm</p>
       <h1 class="text-4xl font-bold md:text-5xl text-white fadein-up">Fadhly Achmad</h1>
@@ -36,7 +40,8 @@
         class="w-70 md:h-auto rounded-full border-4 border-zinc-300 pict"
         src="../assets/hitam.jpg">
     </div>
-  </main>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -49,12 +54,36 @@ export default {
       txt: '',
       loopNum: 0,
       isDeleting: false,
+
+      // particle background state (added)
+      particleCtx: null,
+      particlesList: [],
+      particleAnimId: null,
+      particleResizeHandler: null,
+      particlePointerMoveHandler: null,
+      particlePointerLeaveHandler: null,
+      pointerX: null,
+      pointerY: null,
     };
   },
   mounted() {
     this.$nextTick(() => {
       this.tick();
+      this.initParticles();
     });
+  },
+  beforeUnmount() {
+    // cleanup particle background (added)
+    if (this.particleAnimId) cancelAnimationFrame(this.particleAnimId);
+    if (this.particleResizeHandler) window.removeEventListener('resize', this.particleResizeHandler);
+    if (this.particlePointerMoveHandler) {
+      window.removeEventListener('mousemove', this.particlePointerMoveHandler);
+      window.removeEventListener('touchmove', this.particlePointerMoveHandler);
+    }
+    if (this.particlePointerLeaveHandler) {
+      window.removeEventListener('mouseleave', this.particlePointerLeaveHandler);
+      window.removeEventListener('touchend', this.particlePointerLeaveHandler);
+    }
   },
   methods: {
     tick() {
@@ -88,6 +117,144 @@ export default {
         that.tick();
       }, delta);
     },
+
+    // ---- Particle background (added, does not touch page structure) ----
+    initParticles() {
+      const canvas = this.$refs.particleCanvas;
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      this.particleCtx = ctx;
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      const resize = () => {
+        canvas.width = window.innerWidth * dpr;
+        canvas.height = window.innerHeight * dpr;
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      };
+      resize();
+      this.particleResizeHandler = () => {
+        resize();
+        this.createParticles();
+      };
+      window.addEventListener('resize', this.particleResizeHandler);
+
+      // pointer / touch tracking so particles can react (added)
+      this.particlePointerMoveHandler = (e) => {
+        if (e.touches && e.touches.length) {
+          this.pointerX = e.touches[0].clientX;
+          this.pointerY = e.touches[0].clientY;
+        } else {
+          this.pointerX = e.clientX;
+          this.pointerY = e.clientY;
+        }
+      };
+      this.particlePointerLeaveHandler = () => {
+        this.pointerX = null;
+        this.pointerY = null;
+      };
+      window.addEventListener('mousemove', this.particlePointerMoveHandler, { passive: true });
+      window.addEventListener('touchmove', this.particlePointerMoveHandler, { passive: true });
+      window.addEventListener('mouseleave', this.particlePointerLeaveHandler);
+      window.addEventListener('touchend', this.particlePointerLeaveHandler);
+
+      this.createParticles();
+      this.animateParticles();
+    },
+
+    createParticles() {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      // density kept low for an elegant, uncluttered look
+      const area = w * h;
+      const count = Math.max(30, Math.min(70, Math.round(area / 22000)));
+
+      this.particlesList = Array.from({ length: count }, () => {
+        const x = Math.random() * w;
+        const y = Math.random() * h;
+        return {
+          x,
+          y,
+          baseVx: (Math.random() - 0.5) * 0.15,
+          baseVy: (Math.random() - 0.5) * 0.15,
+          r: Math.random() * 1.6 + 0.6,
+          alpha: Math.random() * 0.5 + 0.2,
+        };
+      });
+    },
+
+    animateParticles() {
+      const ctx = this.particleCtx;
+      const canvas = this.$refs.particleCanvas;
+      if (!ctx || !canvas) return;
+
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const linkDist = 130;
+
+      ctx.clearRect(0, 0, w, h);
+
+      const particles = this.particlesList;
+      const px = this.pointerX;
+      const py = this.pointerY;
+      const avoidRadius = 110; // how close before particles start dodging
+      const avoidStrength = 1.8; // how hard they push away
+
+      // draw subtle connecting lines first
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const p1 = particles[i];
+          const p2 = particles[j];
+          const dx = p1.x - p2.x;
+          const dy = p1.y - p2.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < linkDist) {
+            const lineAlpha = (1 - dist / linkDist) * 0.08;
+            ctx.strokeStyle = `rgba(255, 255, 255, ${lineAlpha})`;
+            ctx.lineWidth = 0.6;
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // draw and update particles
+      particles.forEach((p) => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha})`;
+        ctx.fill();
+
+        let vx = p.baseVx;
+        let vy = p.baseVy;
+
+        // dodge cursor / finger touch (added)
+        if (px !== null && py !== null) {
+          const dx = p.x - px;
+          const dy = p.y - py;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < avoidRadius && dist > 0.01) {
+            const force = (1 - dist / avoidRadius) * avoidStrength;
+            vx += (dx / dist) * force;
+            vy += (dy / dist) * force;
+          }
+        }
+
+        p.x += vx;
+        p.y += vy;
+
+        if (p.x < 0) p.x = w;
+        if (p.x > w) p.x = 0;
+        if (p.y < 0) p.y = h;
+        if (p.y > h) p.y = 0;
+      });
+
+      this.particleAnimId = requestAnimationFrame(this.animateParticles);
+    },
   },
 }
 </script>
@@ -96,6 +263,18 @@ export default {
 body {
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+/* Particle background styling (added) */
+.particle-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background: transparent;
 }
 
 .typewrite > .wrap {
