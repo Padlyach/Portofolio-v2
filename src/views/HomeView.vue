@@ -179,6 +179,9 @@ export default {
           y,
           baseVx: (Math.random() - 0.5) * 0.15,
           baseVy: (Math.random() - 0.5) * 0.15,
+          // current velocity, eased toward target each frame for a fluid, "alive" feel (added)
+          vx: 0,
+          vy: 0,
           r: Math.random() * 1.6 + 0.6,
           alpha: Math.random() * 0.5 + 0.2,
         };
@@ -199,8 +202,10 @@ export default {
       const particles = this.particlesList;
       const px = this.pointerX;
       const py = this.pointerY;
-      const avoidRadius = 110; // how close before particles start dodging
-      const avoidStrength = 1.8; // how hard they push away
+      // more responsive cursor interaction (tuned)
+      const avoidRadius = 160; // wider radius so particles react sooner
+      const avoidStrength = 3.2; // stronger push so the dodge is clearly visible
+      const easing = 0.18; // how quickly particles ease toward their target velocity each frame
 
       // draw subtle connecting lines first
       for (let i = 0; i < particles.length; i++) {
@@ -229,23 +234,27 @@ export default {
         ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha})`;
         ctx.fill();
 
-        let vx = p.baseVx;
-        let vy = p.baseVy;
+        let targetVx = p.baseVx;
+        let targetVy = p.baseVy;
 
-        // dodge cursor / finger touch (added)
+        // dodge cursor / finger touch (tuned to react faster and stronger)
         if (px !== null && py !== null) {
           const dx = p.x - px;
           const dy = p.y - py;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < avoidRadius && dist > 0.01) {
-            const force = (1 - dist / avoidRadius) * avoidStrength;
-            vx += (dx / dist) * force;
-            vy += (dy / dist) * force;
+            const force = Math.pow(1 - dist / avoidRadius, 2) * avoidStrength;
+            targetVx += (dx / dist) * force;
+            targetVy += (dy / dist) * force;
           }
         }
 
-        p.x += vx;
-        p.y += vy;
+        // ease current velocity toward target velocity for a smooth, lively motion (added)
+        p.vx += (targetVx - p.vx) * easing;
+        p.vy += (targetVy - p.vy) * easing;
+
+        p.x += p.vx;
+        p.y += p.vy;
 
         if (p.x < 0) p.x = w;
         if (p.x > w) p.x = 0;

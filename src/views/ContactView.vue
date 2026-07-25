@@ -1,5 +1,9 @@
 <template>
-  <main class="min-h-[70vh] flex items-center justify-center px-5 md:px-12 py-10">
+  <div>
+    <!-- Particle background (added) -->
+    <canvas ref="particleCanvas" class="particle-bg"></canvas>
+
+    <main class="min-h-[70vh] flex items-center justify-center px-5 md:px-12 py-10">
     <div
       class="relative w-full max-w-5xl grid grid-cols-1 md:grid-cols-[38%_1fr] bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950 border border-zinc-800 rounded-3xl overflow-hidden animate-fade-in-up shadow-2xl shadow-black/50">
 
@@ -60,7 +64,7 @@
               <span class="text-sm font-medium text-zinc-200 truncate">IG: Jio</span>
             </div>
             <button
-              class="flex items-center gap-1.5 px-3 py-1.5 bg-transparent border rounded-lg text-xs font-medium whitespace-nowrap transition-all duration-300"
+              class="flex items-center justify-center gap-1.5 px-3 py-1.5 min-w-[92px] bg-transparent border rounded-lg text-xs font-medium whitespace-nowrap transition-all duration-300"
               :class="copiedKey === 'ig'
                 ? 'text-zinc-100 border-zinc-500 bg-zinc-800/60'
                 : 'text-zinc-500 border-zinc-700 hover:bg-white/10 hover:border-zinc-500 hover:text-zinc-200'"
@@ -74,6 +78,28 @@
               </svg>
               {{ copiedKey === 'ig' ? 'Tersalin' : 'Salin' }}
             </button>
+          </a>
+
+          <!-- Bekerjasama: ArkanaWeb -->
+          <a href="https://arkanaweb.vercel.app/" target="_blank" rel="noreferrer"
+            class="group flex items-center gap-3 p-3.5 bg-zinc-950/50 border border-zinc-800 rounded-xl no-underline transition-all duration-300 hover:border-zinc-600 hover:bg-zinc-900/70">
+            <div
+              class="relative w-10 h-10 rounded-lg bg-white/10 border border-zinc-700 flex items-center justify-center text-zinc-200 flex-shrink-0 overflow-hidden">
+              <span class="absolute inset-0 flex items-center justify-center text-[11px] font-bold text-zinc-300">AW</span>
+              <img src="/img/arkana.png" alt="ArkanaWeb" width="40" height="40"
+                class="relative w-full h-full object-cover" onerror="this.style.display='none'" />
+            </div>
+            <div class="flex flex-col gap-0.5 flex-1 min-w-0">
+              <span class="text-[10px] uppercase tracking-wider text-zinc-500 font-medium">Bekerjasama</span>
+              <span class="text-sm font-medium text-zinc-200 truncate">ArkanaWeb</span>
+            </div>
+            <span
+              class="flex items-center justify-center gap-1.5 px-3 py-1.5 min-w-[92px] bg-transparent border border-zinc-700 rounded-lg text-xs font-medium whitespace-nowrap text-zinc-500 transition-all duration-300 group-hover:bg-white/10 group-hover:border-zinc-500 group-hover:text-zinc-200">
+              <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9" />
+              </svg>
+              Kunjungi
+            </span>
           </a>
 
           <!-- WhatsApp -->
@@ -93,7 +119,7 @@
               <span class="text-sm font-medium text-zinc-200 truncate">+62 857-7290-0719</span>
             </div>
             <button
-              class="flex items-center gap-1.5 px-3 py-1.5 bg-transparent border rounded-lg text-xs font-medium whitespace-nowrap transition-all duration-300"
+              class="flex items-center justify-center gap-1.5 px-3 py-1.5 min-w-[92px] bg-transparent border rounded-lg text-xs font-medium whitespace-nowrap transition-all duration-300"
               :class="copiedKey === 'phone'
                 ? 'text-zinc-100 border-zinc-500 bg-zinc-800/60'
                 : 'text-zinc-500 border-zinc-700 hover:bg-white/10 hover:border-zinc-500 hover:text-zinc-200'"
@@ -114,7 +140,7 @@
           <a href="https://wa.me/6285772900719" target="_blank" rel="noreferrer"
             class="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 bg-white text-zinc-900 rounded-xl text-sm font-semibold no-underline shadow-lg shadow-black/30 transition-all duration-300 hover:bg-zinc-200 hover:-translate-y-0.5">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
             </svg>
             Kirim Pesan
           </a>
@@ -145,7 +171,8 @@
         </div>
       </div>
     </div>
-  </main>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -154,7 +181,35 @@ export default {
   data() {
     return {
       copiedKey: null,
+
+      // particle background state (added)
+      particleCtx: null,
+      particlesList: [],
+      particleAnimId: null,
+      particleResizeHandler: null,
+      particlePointerMoveHandler: null,
+      particlePointerLeaveHandler: null,
+      pointerX: null,
+      pointerY: null,
     };
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.initParticles();
+    });
+  },
+  beforeUnmount() {
+    // cleanup particle background (added)
+    if (this.particleAnimId) cancelAnimationFrame(this.particleAnimId);
+    if (this.particleResizeHandler) window.removeEventListener('resize', this.particleResizeHandler);
+    if (this.particlePointerMoveHandler) {
+      window.removeEventListener('mousemove', this.particlePointerMoveHandler);
+      window.removeEventListener('touchmove', this.particlePointerMoveHandler);
+    }
+    if (this.particlePointerLeaveHandler) {
+      window.removeEventListener('mouseleave', this.particlePointerLeaveHandler);
+      window.removeEventListener('touchend', this.particlePointerLeaveHandler);
+    }
   },
   methods: {
     copyText(text, key) {
@@ -164,6 +219,150 @@ export default {
           this.copiedKey = null;
         }, 1800);
       });
+    },
+
+    // ---- Particle background (added, does not touch page structure/components) ----
+    initParticles() {
+      const canvas = this.$refs.particleCanvas;
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      this.particleCtx = ctx;
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      const resize = () => {
+        canvas.width = window.innerWidth * dpr;
+        canvas.height = window.innerHeight * dpr;
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      };
+      resize();
+      this.particleResizeHandler = () => {
+        resize();
+        this.createParticles();
+      };
+      window.addEventListener('resize', this.particleResizeHandler);
+
+      // pointer / touch tracking so particles can react (added)
+      this.particlePointerMoveHandler = (e) => {
+        if (e.touches && e.touches.length) {
+          this.pointerX = e.touches[0].clientX;
+          this.pointerY = e.touches[0].clientY;
+        } else {
+          this.pointerX = e.clientX;
+          this.pointerY = e.clientY;
+        }
+      };
+      this.particlePointerLeaveHandler = () => {
+        this.pointerX = null;
+        this.pointerY = null;
+      };
+      window.addEventListener('mousemove', this.particlePointerMoveHandler, { passive: true });
+      window.addEventListener('touchmove', this.particlePointerMoveHandler, { passive: true });
+      window.addEventListener('mouseleave', this.particlePointerLeaveHandler);
+      window.addEventListener('touchend', this.particlePointerLeaveHandler);
+
+      this.createParticles();
+      this.animateParticles();
+    },
+
+    createParticles() {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      // density kept low for an elegant, uncluttered look
+      const area = w * h;
+      const count = Math.max(30, Math.min(70, Math.round(area / 22000)));
+
+      this.particlesList = Array.from({ length: count }, () => {
+        const x = Math.random() * w;
+        const y = Math.random() * h;
+        return {
+          x,
+          y,
+          baseVx: (Math.random() - 0.5) * 0.15,
+          baseVy: (Math.random() - 0.5) * 0.15,
+          vx: 0,
+          vy: 0,
+          r: Math.random() * 1.6 + 0.6,
+          alpha: Math.random() * 0.5 + 0.2,
+        };
+      });
+    },
+
+    animateParticles() {
+      const ctx = this.particleCtx;
+      const canvas = this.$refs.particleCanvas;
+      if (!ctx || !canvas) return;
+
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const linkDist = 130;
+
+      ctx.clearRect(0, 0, w, h);
+
+      const particles = this.particlesList;
+      const px = this.pointerX;
+      const py = this.pointerY;
+      const avoidRadius = 160;
+      const avoidStrength = 3.2;
+      const easing = 0.18;
+
+      // draw subtle connecting lines first
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const p1 = particles[i];
+          const p2 = particles[j];
+          const dx = p1.x - p2.x;
+          const dy = p1.y - p2.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < linkDist) {
+            const lineAlpha = (1 - dist / linkDist) * 0.08;
+            ctx.strokeStyle = `rgba(255, 255, 255, ${lineAlpha})`;
+            ctx.lineWidth = 0.6;
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // draw and update particles
+      particles.forEach((p) => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha})`;
+        ctx.fill();
+
+        let targetVx = p.baseVx;
+        let targetVy = p.baseVy;
+
+        // dodge cursor / finger touch (added)
+        if (px !== null && py !== null) {
+          const dx = p.x - px;
+          const dy = p.y - py;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < avoidRadius && dist > 0.01) {
+            const force = Math.pow(1 - dist / avoidRadius, 2) * avoidStrength;
+            targetVx += (dx / dist) * force;
+            targetVy += (dy / dist) * force;
+          }
+        }
+
+        p.vx += (targetVx - p.vx) * easing;
+        p.vy += (targetVy - p.vy) * easing;
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0) p.x = w;
+        if (p.x > w) p.x = 0;
+        if (p.y < 0) p.y = h;
+        if (p.y > h) p.y = 0;
+      });
+
+      this.particleAnimId = requestAnimationFrame(this.animateParticles);
     },
   },
 };
@@ -183,5 +382,19 @@ export default {
 
 .animate-fade-in-up {
   animation: fade-in-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+</style>
+
+<style>
+/* Particle background styling (added, global so it can sit behind the whole viewport) */
+.particle-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background: transparent;
 }
 </style>
