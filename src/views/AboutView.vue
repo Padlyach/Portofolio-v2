@@ -59,7 +59,14 @@
           <div class="flex flex-col gap-6 w-full animate-fade-in-left">
             <div
               class="inline-flex items-center gap-2 bg-white/10 border border-zinc-400/30 px-4 py-2 rounded-full w-fit text-sm text-zinc-200 animate-fade-in-up">
-              <span class="text-lg animate-wave">👋</span>
+              <span class="text-lg animate-wave inline-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5" />
+                  <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v6" />
+                  <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8" />
+                  <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-1-6-3l-3.5-5.5a1.5 1.5 0 0 1 2.5-1.7L7 15" />
+                </svg>
+              </span>
               <span>Hello, I'm</span>
             </div>
 
@@ -87,7 +94,7 @@
                 <div
                   class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-shine">
                 </div>
-                <div class="text-3xl drop-shadow-lg">{{ card.icon }}</div>
+                <div class="text-3xl drop-shadow-lg text-zinc-200" v-html="card.icon"></div>
                 <div class="flex-1 z-10">
                   <div class="text-xs text-zinc-400 mb-1">{{ card.label }}</div>
                   <div class="text-sm text-white font-medium">{{ card.value }}</div>
@@ -131,7 +138,11 @@
                   <span
                     class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 transition-opacity duration-300"
                     :class="{ 'opacity-100': activeTab === 1 }"></span>
-                  <span class="text-xl relative">⚡</span>
+                  <span class="text-xl relative inline-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M13 2 3 14h6l-1 8 11-14h-7l1-6z" />
+                    </svg>
+                  </span>
                   <span class="relative">Tech Stack</span>
                   <span class="bg-zinc-500/30 px-2 py-0.5 rounded-full text-xs font-bold relative">{{ tech.length
                     }}</span>
@@ -144,7 +155,11 @@
                   <span
                     class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 transition-opacity duration-300"
                     :class="{ 'opacity-100': activeTab === 2 }"></span>
-                  <span class="text-xl relative">🛠️</span>
+                  <span class="text-xl relative inline-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                    </svg>
+                  </span>
                   <span class="relative">Tools</span>
                   <span class="bg-zinc-500/30 px-2 py-0.5 rounded-full text-xs font-bold relative">{{ tools.length
                     }}</span>
@@ -224,15 +239,27 @@ export default {
     return {
       activeTab: 1,
       infoCards: [
-        { icon: '🎓', label: 'Education', value: 'SMK Informatika Pesat' },
-        { icon: '💻', label: 'Major', value: 'Software Engineering' },
-        { icon: '📍', label: 'Location', value: 'Jakarta, Indonesia' },
-        { icon: '🎯', label: 'Focus', value: 'Web Development' }
+        {
+          label: 'Education', value: 'SMK Informatika Pesat',
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>`
+        },
+        {
+          label: 'Major', value: 'Software Engineering',
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`
+        },
+        {
+          label: 'Location', value: 'Jakarta, Indonesia',
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`
+        },
+        {
+          label: 'Focus', value: 'Web Development',
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>`
+        }
       ],
       socialLinks: [
         // Link ditambahkan di sini
-        { name: 'GitHub', icon: '💻', link: 'https://github.com/Padlyach' },
-        { name: 'LinkedIn', icon: '💼', link: 'https://www.linkedin.com/in/fadhly-achmad/' },
+        { name: 'GitHub', icon: '', link: 'https://github.com/Padlyach' },
+        { name: 'LinkedIn', icon: '', link: 'https://www.linkedin.com/in/fadhly-achmad/' },
       ],
       tech: [
         { id: 1, name: 'HTML', imageUrl: 'https://cdn-icons-png.flaticon.com/512/1051/1051277.png', status: 'Advanced' },
@@ -288,8 +315,13 @@ export default {
           </svg>
         `;
       }
-      // Untuk Email dan lainnya, kembalikan emoji default
-      return this.socialLinks.find(s => s.name === name)?.icon || '🔗';
+      // Fallback ikon generik (link) untuk platform lain
+      return `
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-300 group-hover:text-zinc-100">
+          <path d="M10 13a5 5 0 0 0 7.07 0l1.93-1.93a5 5 0 0 0-7.07-7.07L10.5 5.5" />
+          <path d="M14 11a5 5 0 0 0-7.07 0L5 12.93a5 5 0 0 0 7.07 7.07L13.5 18.5" />
+        </svg>
+      `;
     }
   }
 }

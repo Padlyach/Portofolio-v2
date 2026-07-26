@@ -10,11 +10,11 @@
             <div class="text-3xl font-bold bg-gradient-to-br from-white to-zinc-400 bg-clip-text text-transparent">{{ items.length }}</div>
             <div class="text-xs text-zinc-400 mt-1">Total Projects</div>
           </div>
-          <div class="bg-zinc-900/60 border border-zinc-700 rounded-xl px-6 py-4 backdrop-blur-lg hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
+          <div class="bg-blue-500/10 border border-blue-400/30 rounded-xl px-6 py-4 backdrop-blur-lg hover:border-blue-400/60 hover:bg-blue-500/15 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
             <div class="text-3xl font-bold bg-gradient-to-br from-blue-300 to-blue-500 bg-clip-text text-transparent">{{ frontendCount }}</div>
             <div class="text-xs text-zinc-400 mt-1">Frontend</div>
           </div>
-          <div class="bg-zinc-900/60 border border-zinc-700 rounded-xl px-6 py-4 backdrop-blur-lg hover:border-green-500 hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300">
+          <div class="bg-green-500/10 border border-green-400/30 rounded-xl px-6 py-4 backdrop-blur-lg hover:border-green-400/60 hover:bg-green-500/15 hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300">
             <div class="text-3xl font-bold bg-gradient-to-br from-green-300 to-green-500 bg-clip-text text-transparent">{{ fullstackCount }}</div>
             <div class="text-xs text-zinc-400 mt-1">Full Stack</div>
           </div>
@@ -31,7 +31,15 @@
               ? 'bg-white text-zinc-900 shadow-lg shadow-white/30 scale-105' 
               : 'bg-zinc-800/50 text-zinc-400 border border-zinc-700 hover:bg-zinc-700/50 hover:text-white hover:border-zinc-600'
           ]">
-          <span class="text-lg">🎨</span>
+          <span class="text-lg inline-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8Z" />
+              <circle cx="6.5" cy="11.5" r="1.5" fill="currentColor" stroke="none" />
+              <circle cx="9.5" cy="7.5" r="1.5" fill="currentColor" stroke="none" />
+              <circle cx="14.5" cy="7.5" r="1.5" fill="currentColor" stroke="none" />
+              <circle cx="17.5" cy="11.5" r="1.5" fill="currentColor" stroke="none" />
+            </svg>
+          </span>
           <span>All Projects</span>
           <span class="bg-black/10 px-2 py-0.5 rounded-full text-xs">{{ items.length }}</span>
         </button>
@@ -39,27 +47,36 @@
         <button 
           @click="activeFilter = 'frontend'" 
           :class="[
-            'flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300',
+            'flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 backdrop-blur-md',
             activeFilter === 'frontend' 
-              ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30 scale-105' 
-              : 'bg-zinc-800/50 text-zinc-400 border border-zinc-700 hover:bg-zinc-700/50 hover:text-white hover:border-zinc-600'
+              ? 'bg-blue-500/20 text-blue-100 border border-blue-400/50 shadow-lg shadow-blue-500/20 scale-105' 
+              : 'bg-zinc-800/50 text-zinc-400 border border-zinc-700 hover:bg-blue-500/10 hover:text-blue-200 hover:border-blue-400/30'
           ]">
-          <span class="text-lg">💻</span>
+          <span class="text-lg inline-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
+            </svg>
+          </span>
           <span>Frontend</span>
-          <span class="bg-white/20 px-2 py-0.5 rounded-full text-xs">{{ frontendCount }}</span>
+          <span class="bg-white/10 px-2 py-0.5 rounded-full text-xs">{{ frontendCount }}</span>
         </button>
         
         <button 
           @click="activeFilter = 'fullstack'" 
           :class="[
-            'flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300',
+            'flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 backdrop-blur-md',
             activeFilter === 'fullstack' 
-              ? 'bg-green-500 text-white shadow-lg shadow-green-500/30 scale-105' 
-              : 'bg-zinc-800/50 text-zinc-400 border border-zinc-700 hover:bg-zinc-700/50 hover:text-white hover:border-zinc-600'
+              ? 'bg-green-500/20 text-green-100 border border-green-400/50 shadow-lg shadow-green-500/20 scale-105' 
+              : 'bg-zinc-800/50 text-zinc-400 border border-zinc-700 hover:bg-green-500/10 hover:text-green-200 hover:border-green-400/30'
           ]">
-          <span class="text-lg">⚡</span>
+          <span class="text-lg inline-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13 2 3 14h6l-1 8 11-14h-7l1-6z" />
+            </svg>
+          </span>
           <span>Full Stack</span>
-          <span class="bg-white/20 px-2 py-0.5 rounded-full text-xs">{{ fullstackCount }}</span>
+          <span class="bg-white/10 px-2 py-0.5 rounded-full text-xs">{{ fullstackCount }}</span>
         </button>
       </div>
 
@@ -98,12 +115,19 @@
                 <!-- Category Badge -->
                 <div class="absolute top-3 right-3 z-20">
                   <span :class="[
-                    'px-3 py-1.5 rounded-full text-xs font-semibold backdrop-blur-md border',
+                    'flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold backdrop-blur-md border shadow-lg',
                     item.category === 'frontend' 
-                      ? 'bg-blue-500/90 text-white border-blue-400/30' 
-                      : 'bg-green-500/90 text-white border-green-400/30'
+                      ? 'bg-blue-500/20 text-blue-100 border-blue-400/40 shadow-blue-500/10' 
+                      : 'bg-green-500/20 text-green-100 border-green-400/40 shadow-green-500/10'
                   ]">
-                    {{ item.category === 'frontend' ? '💻 Frontend' : '⚡ Full Stack' }}
+                    <svg v-if="item.category === 'frontend'" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <path d="M8 21h8M12 17v4" />
+                    </svg>
+                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M13 2 3 14h6l-1 8 11-14h-7l1-6z" />
+                    </svg>
+                    {{ item.category === 'frontend' ? 'Frontend' : 'Full Stack' }}
                   </span>
                 </div>
 
@@ -176,7 +200,12 @@
 
         <!-- Empty State -->
         <div v-if="filteredItems.length === 0" class="text-center py-20">
-          <div class="text-6xl mb-4">📭</div>
+          <div class="flex justify-center mb-4 text-zinc-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-6l-2 3h-4l-2-3H2" />
+              <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z" />
+            </svg>
+          </div>
           <p class="text-zinc-400 text-lg">Tidak ada project dalam kategori ini</p>
         </div>
       </section>
