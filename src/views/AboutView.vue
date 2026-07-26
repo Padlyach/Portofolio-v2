@@ -1,10 +1,10 @@
 <template>
   <div class="min-h-screen">
     <div
-      class="bg-gradient-to-br from-zinc-900/95 to-zinc-800/95 p-5 md:p-12 mx-3 mb-5 border border-zinc-700 rounded-3xl backdrop-blur-lg relative overflow-hidden">
-      <div
-        class="absolute top-0 left-0 right-0 h-48 bg-gradient-radial from-white/10 to-transparent pointer-events-none">
-      </div>
+      class="about-card p-5 md:p-12 mx-3 mb-5 border border-zinc-700/60 rounded-3xl backdrop-blur-lg relative overflow-hidden">
+      <div class="about-card-glow about-card-glow-1"></div>
+      <div class="about-card-glow about-card-glow-2"></div>
+      <div class="about-card-glow about-card-glow-3"></div>
 
       <article class="relative">
         <header class="mb-8">
@@ -333,6 +333,47 @@ export default {
   COPY & PASTE SEMUA CSS DI BAWAH INI
   =====================================
 */
+
+/* === About card background: gradasi halus multi-layer, tidak ada garis potongan === */
+.about-card {
+  background:
+    radial-gradient(circle at 15% 8%, rgba(255, 255, 255, 0.06), transparent 45%),
+    radial-gradient(circle at 85% 0%, rgba(180, 180, 190, 0.05), transparent 50%),
+    linear-gradient(160deg, rgba(39, 39, 42, 0.97) 0%, rgba(24, 24, 27, 0.97) 45%, rgba(15, 15, 17, 0.98) 100%);
+}
+
+.about-card-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-card-glow-1 {
+  width: 420px;
+  height: 260px;
+  top: -140px;
+  left: 5%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.14), transparent 70%);
+}
+
+.about-card-glow-2 {
+  width: 380px;
+  height: 380px;
+  bottom: -220px;
+  right: -80px;
+  background: radial-gradient(circle, rgba(161, 161, 170, 0.1), transparent 70%);
+}
+
+.about-card-glow-3 {
+  width: 260px;
+  height: 260px;
+  top: 30%;
+  right: 10%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06), transparent 70%);
+}
+
 @keyframes fade-in-down {
   from {
     opacity: 0;

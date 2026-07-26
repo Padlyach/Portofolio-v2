@@ -310,8 +310,16 @@ export default {
           github: 'https://github.com/Padlyach/PPDB_FE',
           demo: ''
         },
-     
-       
+          {
+          id: 10,
+          name: 'LSP STP Bogor',
+          imageUrl: 'stpbogor',
+          status: 'Ini Adalah Website Sekolah Pariwisata Bogor.',
+          tech: 'Laravel 12 , Tailwind CSS, JS , PHP, MySQL ',
+          category: 'fullstack',
+          github: '',
+          demo: ''
+        }, 
       ]
     };
   },
