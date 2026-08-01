@@ -320,6 +320,16 @@ export default {
           github: '',
           demo: ''
         }, 
+        {
+          id: 11,
+          name: 'Website Music',
+          imageUrl: 'websitemusic',
+          status: 'Ini Adalah Website Music Dummy .',
+          tech: 'VUE , Tailwind CSS, JS',
+          category: 'frontend',
+          github: 'https://github.com/Padlyach/WebsiteMusic',
+          demo: 'https://website-music-tau.vercel.app/'
+        }, 
       ]
     };
   },
